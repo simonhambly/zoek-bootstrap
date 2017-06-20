@@ -10,7 +10,7 @@ To enable local install of gulp, add this to `./package.json`
 
 ```json
   "scripts": {
-    "gulp": "gulp --"
+    "gulp": "gulp"
   }
 ```
 
@@ -19,8 +19,25 @@ To enable local install of gulp, add this to `./package.json`
 ```sh
 cp node_modules/edition-node-gulp/gulpfile.js .
 cp node_modules/edition-node-gulp/patternlab-config.json .
-
 ```
+
+## Install the a starter kit
+
+Install the default mustache
+
+```sh
+npm run gulp -- patternlab:loadstarterkit --kit starterkit-mustache-bas
+```
+
+## npm scripts
+
+```json
+  "scripts": {
+    "gulp": "gulp",
+    "start": "gulp patternlab:serve"
+  }
+```
+
 
 ## Fix that bug
 There's a bug in the patternlab-core* that expects patternlab-node to have a subdirectory of node_modules.
@@ -31,4 +48,4 @@ As a quick fix, run this
 $ mkdir -p node_modules/patternlab-core/node_modules
 ```
 
-*Exception thrown line 41 of pattern_engines.js
+*Exception thrown line 41 of pattern_engines.js — should really raise an github issue for this...

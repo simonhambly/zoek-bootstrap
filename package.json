@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp --",
+    "build": "gulp patternlab:build",
+    "gulp": "gulp",
+    "start": "gulp patternlab:serve", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zoek Applications Ltd",
