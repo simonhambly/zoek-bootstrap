@@ -1,0 +1,1 @@
+Global elements such as brand colors and fonts.

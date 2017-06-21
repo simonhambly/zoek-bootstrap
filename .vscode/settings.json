@@ -1,0 +1,12 @@
+{
+  "search.exclude": {
+    "node_modules": true,
+    ".DS_Store": true,
+    "public": true
+  },
+  "files.exclude": {
+    "node_modules": false,
+    ".DS_Store": false,
+    "public": false
+  }
+}
