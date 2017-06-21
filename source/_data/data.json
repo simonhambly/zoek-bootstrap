@@ -4,7 +4,8 @@
   "title": "Zoek pattern lab",
   "buttonText": {
     "primary": "Primary action",
-    "secondary": "Secondary action"
+    "secondary": "Secondary action",
+    "small": "Small button"
   },
   "img": {
     "avatar": {
