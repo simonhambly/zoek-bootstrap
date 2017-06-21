@@ -1,2 +1,10 @@
 $primary-font-stack: 'Nunito Sans', sans-serif;
 $secondary-font-stack: 'Open Sans', sans-serif;
+
+.primary-font {
+  font-family: $primary-font-stack
+}
+
+.secondary-font {
+  font-family: $secondary-font-stack
+}
