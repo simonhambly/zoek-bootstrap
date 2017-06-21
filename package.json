@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gulp patternlab:build",
+    "build:patternlab": "gulp patternlab:build",
+    "build:css": "node-sass --recursive --include-path ./node_modules/normalize-scss/sass --output-style compressed --output ./source/css src/styles.scss",
     "gulp": "gulp",
-    "start": "gulp patternlab:serve", 
+    "start": "gulp patternlab:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zoek Applications Ltd",
   "license": "ISC",
   "devDependencies": {
     "edition-node-gulp": "^1.4.0",
+    "node-sass": "^4.5.3",
+    "normalize-scss": "^7.0.0",
     "patternlab-node": "^2.9.3",
     "starterkit-mustache-base": "^3.0.1",
     "styleguidekit-assets-default": "^3.4.0",

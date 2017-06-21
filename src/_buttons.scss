@@ -1,0 +1,22 @@
+button {
+  color: $color-secondary-white;
+  background-color: $color-brand-dark-blue;
+  font-family: $brand-font-stack;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  letter-spacing: 0.03rem;
+}
+
+button.primary-button {
+  background-color: $color-brand-pink;
+}
+
+ul.button-container {
+  list-style: none;
+
+  & li {
+    display: inline-block;
+    margin: 0 0.3rem;
+  }
+}

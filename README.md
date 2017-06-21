@@ -49,3 +49,20 @@ $ mkdir -p node_modules/patternlab-core/node_modules
 ```
 
 *Exception thrown line 41 of pattern_engines.js — should really raise an github issue for this...
+
+
+# Development
+
+To automatically rebuild the patternlab run:
+
+```sh
+$ npm start
+```
+
+Styles are built using Sass, to build them once run `npm run build:css`. 
+
+When developing locally, these can be automatically transpiled on save by running:
+
+```sh
+$ npm run build:css -- --watch
+```

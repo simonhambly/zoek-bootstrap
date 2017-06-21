@@ -1,0 +1,13 @@
+@import 'normalize/import-now';
+@import '_colors';
+@import '_fonts';
+@import '_buttons';
+
+html {
+  font-family: $body-font-stack;
+  color: $color-neutral-80;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $brand-font-stack;
+}
