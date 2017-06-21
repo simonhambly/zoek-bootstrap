@@ -52,3 +52,11 @@
   font-size: 90%;
   line-height: 1;
 }
+
+.sg-pattern-category a {
+  text-decoration: none;
+}
+
+.sg-pattern-category a:hover {
+  text-decoration: underline;
+}
