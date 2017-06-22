@@ -5,7 +5,11 @@
   "buttonText": {
     "primary": "Primary Action",
     "secondary": "Secondary Action",
-    "small": "Small Button"
+    "small": "Small Button",
+    "positive": "Positive",
+    "caution": "Caution",
+    "negative": "Negative",
+    "neutral": "Neutral"
   },
   "img": {
     "avatar": {

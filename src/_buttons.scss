@@ -26,6 +26,22 @@ button.small-button {
   padding: 0.5rem 1.3rem;
 }
 
+button.positive-button {
+  background-color: $color-utility-positive;
+}
+
+button.caution-button {
+  background-color: $color-utility-caution;
+}
+
+button.negative-button {
+  background-color: $color-utility-negative;
+}
+
+button.neutral-button {
+  background-color: $color-utility-neutral;
+}
+
 ul.button-group {
   list-style: none;
   padding-left: 0;
