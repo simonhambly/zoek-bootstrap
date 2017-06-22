@@ -1,3 +1,37 @@
+html {
+  font-family: $secondary-font-stack;
+  color: $color-neutral-80;
+  line-height: 1.3rem;
+}
+
+body {
+  margin: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font-stack;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
 ul li {
   margin: 1rem 0;
+}
+
+pre {
+  background-color: $color-neutral-10;
+  border: 1px solid $color-neutral-30;
+  overflow-x: scroll;
+  padding: 0.5rem;
+  color: $color-neutral-60;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
 }

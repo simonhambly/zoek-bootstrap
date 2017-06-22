@@ -3,9 +3,9 @@
   "key2": "use this for variables you want to load globally",
   "title": "Zoek pattern lab",
   "buttonText": {
-    "primary": "Primary action",
-    "secondary": "Secondary action",
-    "small": "Small button"
+    "primary": "Primary Action",
+    "secondary": "Secondary Action",
+    "small": "Small Button"
   },
   "img": {
     "avatar": {
