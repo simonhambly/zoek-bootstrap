@@ -1,0 +1,22 @@
+
+@mixin placeholder {
+  color: $color-neutral-30;
+}
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  @include placeholder;
+}
+
+::placeholder {
+  @include placeholder;
+}
+
+input[type=text], textarea {
+  color: $color-neutral-80;
+  padding: 0.5rem 0.25rem;
+  letter-spacing: 0.05rem;
+  border-radius: 0.25rem;
+  border: 1px solid $color-neutral-30;
+  width: 100%;
+}
