@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Small buttons
 ---
 
 #### Small buttons

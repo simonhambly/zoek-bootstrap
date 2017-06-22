@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Buttons
 ---
 
 #### Different actions
