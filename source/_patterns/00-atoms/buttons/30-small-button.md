@@ -1,7 +1,7 @@
 ---
-title: Small buttons
+title: Small button
 ---
 
-#### Small buttons
+#### Small button
 
 Use these when space is tight — useful in lists, cards or repeating elements

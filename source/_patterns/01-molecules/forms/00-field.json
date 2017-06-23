@@ -1,0 +1,7 @@
+{
+  "id": "postCode",
+  "label": "post Code",
+  "type": "text",
+  "placeholder": "enter postcode",
+  "fieldNote": "Full UK postcode using capital letters"
+}

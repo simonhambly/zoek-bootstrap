@@ -1,0 +1,8 @@
+{
+  "primaryButton": {
+    "buttonText": "Save"
+  },
+  "cancelButton": {
+    "buttonText": "Cancel"
+  }
+}

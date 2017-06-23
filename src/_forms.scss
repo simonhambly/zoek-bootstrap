@@ -1,6 +1,7 @@
 
 @mixin placeholder {
   color: $color-neutral-30;
+  @include sentence-case;
 }
 ::-webkit-input-placeholder,
 ::-moz-placeholder,
@@ -12,11 +13,48 @@
   @include placeholder;
 }
 
-input[type=text], textarea {
+input[type=text], input[type=password], textarea {
   color: $color-neutral-80;
   padding: 0.5rem 0.25rem;
   letter-spacing: 0.05rem;
   border-radius: 0.25rem;
   border: 1px solid $color-neutral-30;
   width: 100%;
+}
+
+div.field {
+  label {
+    color: $color-brand-dark-blue;
+    font-size: $font-size-s;
+    // margin-bottom: 0.25rem;
+    padding: 0.25rem;
+    display: block;
+    @include sentence-case;
+
+    &.respect-case {
+      @include respect-case;
+    }
+  }
+
+  div.field__note {
+    font-size: $font-size-s;
+    color: $color-neutral-60;
+    padding: 0.25rem;
+    @include sentence-case;
+
+    &.respect-case {
+      @include respect-case;
+    }
+  }
+
+  div.field__validation-message {
+    font-size: $font-size-s;
+    background-color: $color-utility-caution;
+    padding: 0.25rem;
+    @include sentence-case;
+
+    &.respect-case {
+      @include respect-case;
+    }
+  }
 }

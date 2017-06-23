@@ -1,0 +1,10 @@
+<div class="field">
+	<label for="{{ id }}">{{ label }}</label>
+	<input id="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}" value="{{ value }}" />
+	{{# validationMessage }}
+		<div class="field__validation-message">{{{ validationMessage }}}</div>
+	{{/ validationMessage }}
+	{{# fieldNote }}
+		<div class="field__note">{{{ fieldNote }}}</div>
+	{{/ fieldNote }}
+<div>

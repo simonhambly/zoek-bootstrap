@@ -1,0 +1,22 @@
+{
+  "formTitle": "Example form",
+  "fields": [
+    {
+      "id": "one",
+      "label": "one",
+      "type": "text",
+      "placeholder": "enter a value for field one",
+      "fieldNote": "A hint about field one"
+    },
+    {
+      "id": "two",
+      "label": "field Two",
+      "type": "text",
+      "placeholder": "enter a value for field two",
+      "fieldNote": "max length 600 characters"
+    }
+  ],
+  "primaryButton": {
+    "buttonText": "Do something" 
+  }
+}

@@ -1,0 +1,66 @@
+$primary-font-stack: 'Nunito Sans', sans-serif;
+$secondary-font-stack: 'Open Sans', sans-serif;
+
+$font-size-xl: 1.5rem;
+$font-size-l: 1.25rem;
+$font-size-m: 1rem;
+$font-size-s: 0.8rem;
+$font-size-xs: 0.6rem;
+
+@mixin sentence-case() {
+  text-transform: lowercase;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+@mixin respect-case {
+  text-transform: unset;
+}
+
+.primary-font {
+  font-family: $primary-font-stack
+}
+
+.secondary-font {
+  font-family: $secondary-font-stack
+}
+
+html {
+  font-family: $secondary-font-stack;
+  color: $color-neutral-80;
+  line-height: 1.3rem;
+}
+
+body {
+  margin: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-family: $primary-font-stack;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+ul li {
+  margin: 1rem 0;
+}
+
+pre {
+  background-color: $color-neutral-10;
+  border: 1px solid $color-neutral-30;
+  overflow-x: scroll;
+  padding: 0.5rem;
+  color: $color-neutral-60;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
