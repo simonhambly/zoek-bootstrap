@@ -1,8 +1,24 @@
 {
-  "primaryButton": {
-    "buttonText": "Save"
-  },
-  "cancelButton": {
-    "buttonText": "Cancel"
-  }
+  "buttons": [
+    {
+      "primaryButton": {
+        "buttonText": "Save"
+      }
+    },
+    {
+      "cautionButton": {
+        "buttonText": "Use with caution"
+      }
+    },
+    {
+      "negativeButton": {
+        "buttonText": "Delete"
+      }
+    },
+    {
+      "button": {
+        "buttonText": "Cancel"
+      }
+    }
+  ]  
 }

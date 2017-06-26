@@ -2,15 +2,6 @@
   "key": "value",
   "key2": "use this for variables you want to load globally",
   "title": "Zoek pattern lab",
-  "buttonText": {
-    "primary": "Primary Action",
-    "secondary": "Secondary Action",
-    "small": "Small Button",
-    "positive": "Positive",
-    "caution": "Caution",
-    "negative": "Negative",
-    "neutral": "Neutral"
-  },
   "img": {
     "avatar": {
       "src": "http://placeimg.com/100/100/people",

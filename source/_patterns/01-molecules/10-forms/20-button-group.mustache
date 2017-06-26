@@ -1,4 +1,7 @@
 <ul class="button-group">
-  <li>{{# primaryButton }}{{> atoms-primary-button }}{{/ primaryButton }}</li>
-  <li>{{# cancelButton }}{{> atoms-button }}{{/ cancelButton }}</li>
+  {{# buttons }}
+  <li>
+    {{# primaryButton }}{{> atoms-primary-button }}{{/ primaryButton }}{{# cautionButton }}{{> atoms-caution-button }}{{/ cautionButton }}{{# negativeButton }}{{> atoms-negative-button }}{{/ negativeButton }}{{# button }}{{> atoms-button }}{{/ button }}
+  </li>
+  {{/ buttons }}
 </ul>
