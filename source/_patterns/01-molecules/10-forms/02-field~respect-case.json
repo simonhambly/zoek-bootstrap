@@ -1,0 +1,6 @@
+{
+  "label": "post CODE",
+  "note": "UK post codes using capitals",
+  "type": "text",
+  "validationMessage": "full UK post code is required"
+}

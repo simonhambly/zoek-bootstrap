@@ -16,6 +16,10 @@ $font-size-xs: 0.6rem;
 
 @mixin respect-case {
   text-transform: unset;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 .primary-font {
