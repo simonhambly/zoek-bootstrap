@@ -53,16 +53,21 @@ $ mkdir -p node_modules/patternlab-core/node_modules
 
 # Development
 
-To automatically rebuild the patternlab run:
+Run the following to watch for changes to the patterns and automatically rebuild and serve the pattern lab
 
 ```sh
 $ npm start
 ```
 
-Styles are built using Sass, to build them once run `npm run build:css`. 
-
-When developing locally, these can be automatically transpiled on save by running:
+Styles are built using Sass, to build them once run 
 
 ```sh
-$ npm run build:css -- --watch
+$ npm run build:css
+$ npm run build:scaffolding-css
+```
+
+When developing locally, these can be automatically run (using concurrently) with the following
+
+```sh
+$ npm run build:dev
 ```

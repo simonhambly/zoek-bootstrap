@@ -6,6 +6,8 @@
   "scripts": {
     "build:patternlab": "gulp patternlab:build",
     "build:css": "node-sass --recursive --include-path ./node_modules/normalize-scss/sass --output-style compressed --output ./source/css src/styles.scss",
+    "build:dev": "concurrently --kill-all --names 'Scaffolding,CSS' --prefix '{name}-{time}' --timestamp-format 'HH:mm:ss' 'npm run build:scaffolding-css -- --watch' 'npm run build:css -- --watch'",
+    "build:scaffolding-css": "node-sass --recursive --output-style compressed --output ./source/css pattern-scaffolding/pattern-scaffolding.scss",    
     "gulp": "gulp",
     "start": "gulp patternlab:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +15,7 @@
   "author": "Zoek Applications Ltd",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^3.5.0",
     "edition-node-gulp": "^1.4.0",
     "node-sass": "^4.5.3",
     "normalize-scss": "^7.0.0",
