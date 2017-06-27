@@ -1,0 +1,9 @@
+<section class="hero">
+{{# hero }} {{! This should probably be in a block }}
+  <h1>{{ hero.title }}</h1>
+  <h2>{{ hero.subtitle }}</h2>
+  {{# cta }} 
+  {{> atoms-primary-button }}
+  {{/ cta}}
+{{/ hero }}
+</section>

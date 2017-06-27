@@ -16,7 +16,16 @@
       "fieldNote": "max length 600 characters"
     }
   ],
-  "primaryButton": {
-    "buttonText": "Do something" 
-  }
+   "buttons": [
+    {
+      "primaryButton": {
+        "buttonText": "Save"
+      }
+    },
+    {
+      "button": {
+        "buttonText": "Cancel"
+      }
+    }
+  ]  
 }

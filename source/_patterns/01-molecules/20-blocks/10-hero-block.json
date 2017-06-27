@@ -1,0 +1,7 @@
+{
+  "headline": "Headline text",
+  "thePitch": "Some text to reinforce the headline",
+  "cta": {
+    "buttonText": "Call to action" 
+  }
+}

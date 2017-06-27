@@ -1,0 +1,37 @@
+html {
+  background-color: $color-brand-cyan;
+}
+
+html.hirer {
+  background-color: $color-brand-dark-blue-70;  
+}
+
+div.site-header {
+  background-color: $color-secondary-white;
+  padding: 1rem;
+}
+
+body {
+  & > header {
+    padding-bottom: 93px;
+    background-image: url(../images/clouds-upsidedown.svg);
+    background-position: bottom center;
+    background-repeat: repeat-x;
+  }
+
+  & > footer {
+    background-color: $color-brand-dark-blue-130;
+    color: $color-brand-dark-blue-10; 
+  }
+}
+
+section.pitches {
+    padding-top: 93px;
+    background-image: url(../images/clouds.svg);
+    background-position: top center;
+    background-repeat: repeat-x;
+}
+
+article.pitch {
+  background-color: $color-secondary-white;
+}

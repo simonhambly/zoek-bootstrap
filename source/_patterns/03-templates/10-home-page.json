@@ -1,0 +1,20 @@
+{
+  "htmlClass": "hirer",
+  "hero": {
+    "headline": "Main headline",
+    "thePitch": "The pitch to explain the headline",
+    "cta": {
+      "buttonText": "Call to action"
+    }
+  },
+  "pitches": [
+    {
+      "headline": "Pitch 1",
+      "thePitch": "Explaining Pitch 1"
+    },
+    {
+      "headline": "Pitch 2",
+      "thePitch": "Explaining Pitch 2"
+    }
+  ]
+}
