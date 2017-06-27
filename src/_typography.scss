@@ -7,6 +7,8 @@ $font-size-m: 1rem;
 $font-size-s: 0.8rem;
 $font-size-xs: 0.6rem;
 
+$font-color: $color-brand-dark-blue-140;
+
 @mixin sentence-case() {
   text-transform: lowercase;
   &::first-letter {
@@ -32,7 +34,7 @@ $font-size-xs: 0.6rem;
 
 html {
   font-family: $secondary-font-stack;
-  color: $color-neutral-80;
+  color: $font-color;
   line-height: 1.3rem;
 }
 
