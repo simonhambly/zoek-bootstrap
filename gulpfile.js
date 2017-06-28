@@ -40,7 +40,7 @@ gulp.task('pl-copy:js', function () {
 
 // Images copy
 gulp.task('pl-copy:img', function () {
-  return gulp.src('**/*.*',{cwd: normalizePath(paths().source.images)} )
+  return gulp.src(['*.*', '**/*.*'],{cwd: normalizePath(paths().source.images)} )
     .pipe(gulp.dest(normalizePath(paths().public.images)));
 });
 

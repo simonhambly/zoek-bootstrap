@@ -1,0 +1,25 @@
+body > header {
+  padding-bottom: 3rem;
+  background-image: url(../images/clouds-upsidedown.svg);
+  background-position: bottom center;
+  background-repeat: repeat-x;
+}
+
+
+div.site-header {
+  background-color: $color-secondary-white;
+  padding: 1.5rem 0.75rem 0 0.75rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+
+  img.site-logo {
+    height: 3rem;
+    flex: 0 1 auto;
+  }
+
+  img.main-menu-toggle {
+    height: 1.5rem;
+    flex: 0 1 auto;
+  }
+}

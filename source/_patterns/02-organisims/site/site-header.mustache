@@ -1,4 +1,14 @@
 <header>
-  {{> organisims-site-navigation }}
+  <div class="site-header">
+    {{^ isHirer }}
+    <img class="site-logo" src="/images/zoek-logo.svg"/>
+    {{/ isHirer }}
+    {{# isHirer }}
+    <img class="site-logo" src="/images/zoek-hirer-logo.svg"/>
+    {{/ isHirer }}
+
+    <img class="main-menu-toggle" src="/images/menu-icon-hirer.svg"/>
+    {{!> organisims-site-navigation }}
+  </div>
 </header>
 <main>

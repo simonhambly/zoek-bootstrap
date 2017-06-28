@@ -10,8 +10,8 @@
 // > 2. Set the line-height of all text elements to a multiple of 24px.
 
 
-$baseline-font-size: 16px;
-$baseline-line-height: 24px;
+$baseline-font-size: 1rem;
+$baseline-line-height: 1.5 * $baseline-font-size;
 $baseline-grid-color: rgba(0, 170, 255, 0.3);
 
 // Generated from https://www.gridlover.net/try using the following values:
@@ -94,6 +94,11 @@ $scales: (
   font-size: map-get(map-get($scales,$factor), fontSize);
   line-height: map-get(map-get($scales,$factor), autoLineHeight);
   margin: map-get(map-get($scales,$factor), line) 0;
+}
+
+body {
+  font-size: map-get($root, fontSize);
+  line-height: map-get($root, lineHeight);  
 }
 
 // hat tip to https://basehold.it for making the grid overlay content
