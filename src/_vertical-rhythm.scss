@@ -14,91 +14,36 @@ $baseline-font-size: 1rem;
 $baseline-line-height: 1.5 * $baseline-font-size;
 $baseline-grid-color: rgba(0, 170, 255, 0.3);
 
-// Generated from https://www.gridlover.net/try using the following values:
-//  - font-size: 16px
-//  - line-height: 1.5
-//  - scale-factor: 1.333 (perfect fourth)
-//
-// then grab the CSS in scss and rem;
-
-// -ve values generated via http://www.modularscale.com/?1&em&1.333
-
-$root: (
-  fontSize: $baseline-font-size,
-  lineHeight: $baseline-line-height
+// Values generated via http://www.modularscale.com/?1&em&1.333
+$perfectFourthFontSizes: (
+  -2: 0.563rem,
+  -1: 0.75rem,
+   0: 1rem,
+   1: 1.3125rem,
+   2: 1.75rem,
+   3: 2.375rem,
+   4: 3.1875rem,
+   5: 4.1875rem
 );
 
-$scale-2: (
-  fontSize: 0.563rem,
-  line: 1.5rem,
-  autoLineCount: 1,
-  autoLineHeight: 1.5rem
-);
-$scale-1: (
-  fontSize: 0.75rem,
-  line: 1.5rem,
-  autoLineCount: 1,
-  autoLineHeight: 1.5rem
-);
-$scale0: (
-  fontSize: 1rem,
-  line: 1.5rem,
-  autoLineCount: 1,
-  autoLineHeight: 1.5rem
-);
-$scale1: (
-  fontSize: 1.3125rem,
-  line: 1.5rem,
-  autoLineCount: 1,
-  autoLineHeight: 1.5rem
-);
-$scale2: (
-  fontSize: 1.75rem,
-  line: 1.5rem,
-  autoLineCount: 2,
-  autoLineHeight: 3rem
-);
-$scale3: (
-  fontSize: 2.375rem,
-  line: 1.5rem,
-  autoLineCount: 2,
-  autoLineHeight: 3rem
-);
-$scale4: (
-  fontSize: 3.1875rem,
-  line: 1.5rem,
-  autoLineCount: 3,
-  autoLineHeight: 4.5rem
-);
-$scale5: (
-  fontSize: 4.1875rem,
-  line: 1.5rem,
-  autoLineCount: 3,
-  autoLineHeight: 4.5rem
-);
+@function fontSizeForScale ($scale) {
+  @return map-get($perfectFourthFontSizes, $scale)
+}
 
-// end of gridlovers generated scss
+@function lineCount ($font-size) {
+  @return ceil($font-size / $baseline-line-height);
+}
 
-$scales: (
-  -2: $scale-2,
-  -1: $scale-1,
-  0: $scale0,
-  1: $scale1,
-  2: $scale2,
-  3: $scale3,  
-  4: $scale4,
-  5: $scale5
-);
-
-@mixin scale ($factor){  
-  font-size: map-get(map-get($scales,$factor), fontSize);
-  line-height: map-get(map-get($scales,$factor), autoLineHeight);
-  margin: map-get(map-get($scales,$factor), line) 0;
+@mixin fitToBaselineGrid ($scale) {
+  $font-size: fontSizeForScale($scale);
+  font-size: $font-size;
+  line-height: lineCount($font-size) * $baseline-line-height;
+  margin: $baseline-line-height 0;
 }
 
 body {
-  font-size: map-get($root, fontSize);
-  line-height: map-get($root, lineHeight);  
+  font-size: $baseline-font-size;
+  line-height: $baseline-line-height;  
 }
 
 // hat tip to https://basehold.it for making the grid overlay content

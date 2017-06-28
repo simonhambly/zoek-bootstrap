@@ -56,30 +56,30 @@ h1, h2, h3, h4, h5, h6 {
 
 // TODO: sort max-wdith on these based on rem
 h1 {
-  @include scale(4);
+  @include fitToBaselineGrid(4);
 }
 
 h2 {
-  @include scale(3);
+  @include fitToBaselineGrid(3);
 }
 
 h3 {
-  @include scale(2);
+  @include fitToBaselineGrid(2);
 }
 
 h4 {
-  @include scale(1);
+  @include fitToBaselineGrid(1);
 }
 
 p,
 ul li,
 ol li
  {
-  @include scale(0);
+  @include fitToBaselineGrid(0);
 }
 
 small {
-  // @include scale(-1);
+  // @include fitToBaselineGrid(-1);
   font-size: 0.75rem;
   line-height: 1.25rem; //TODO: why is this .25rem less than line-height of the p tag?
 }
