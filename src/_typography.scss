@@ -39,16 +39,41 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
   font-family: $primary-font-stack;
 }
 
-ul {
-  padding-left: 1.25rem;
+// TODO: sort max-wdith on these based on rem
+h1 {
+  @include scale(4);
 }
 
-ul li {
-  margin: 1rem 0;
+h2 {
+  @include scale(3);
+}
+
+h3 {
+  @include scale(2);
+}
+
+h4 {
+  @include scale(1);
+}
+
+p,
+ul li,
+ol li
+ {
+  @include scale(0);
+}
+
+small {
+  // @include scale(-1);
+  font-size: 0.75rem;
+  line-height: 1.25rem; //TODO: why is this .25rem less than line-height of the p tag?
+}
+
+ul, ol {
+  padding-left: 1.5rem; //TODO feels like this should be related to line-height
 }
 
 pre {

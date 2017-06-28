@@ -1,0 +1,130 @@
+// Backgrounder on vertical-rhythm https://zellwk.com/blog/why-vertical-rhythms/
+// 
+// tldr;
+// > The baseline is determined by the line-height property of the body text. Let’s say your body text
+// > has a computed line-height value of 24px. Your baseline is then 24px.
+// >
+// > Implementing Vertical Rhythm from this point on is simple. There are two rules:
+// >
+// > 1. Set the vertical white space between elements to a multiple of 24px.
+// > 2. Set the line-height of all text elements to a multiple of 24px.
+
+
+$baseline-font-size: 16px;
+// $baseline-font-line-height-ratio: 1.5;
+$baseline-line-height: 24px;
+$baseline-grid-color: rgba(0, 170, 255, 0.3);
+// $baseline-grid-color: rgba(51, 76, 107, 0.3);
+
+// Generated from https://www.gridlover.net/try using the following values:
+//  - font-size: 16px
+//  - line-height: 1.5
+//  - scale-factor: 1.333 (perfect fourth)
+//
+// then grab the CSS in scss and rem;
+
+// -ve values generated via http://www.modularscale.com/?1&em&1.333
+
+$root: (
+  fontSize: $baseline-font-size,
+  lineHeight: $baseline-line-height
+);
+
+$scale-2: (
+  fontSize: 0.563rem,
+  line: 1.5rem,
+  autoLineCount: 1,
+  autoLineHeight: 1.5rem
+);
+$scale-1: (
+  fontSize: 0.75rem,
+  line: 1.5rem,
+  autoLineCount: 1,
+  autoLineHeight: 1.5rem
+);
+$scale0: (
+  fontSize: 1rem,
+  line: 1.5rem,
+  autoLineCount: 1,
+  autoLineHeight: 1.5rem
+);
+$scale1: (
+  fontSize: 1.3125rem,
+  line: 1.5rem,
+  autoLineCount: 1,
+  autoLineHeight: 1.5rem
+);
+$scale2: (
+  fontSize: 1.75rem,
+  line: 1.5rem,
+  autoLineCount: 2,
+  autoLineHeight: 3rem
+);
+$scale3: (
+  fontSize: 2.375rem,
+  line: 1.5rem,
+  autoLineCount: 2,
+  autoLineHeight: 3rem
+);
+$scale4: (
+  fontSize: 3.1875rem,
+  line: 1.5rem,
+  autoLineCount: 3,
+  autoLineHeight: 4.5rem
+);
+$scale5: (
+  fontSize: 4.1875rem,
+  line: 1.5rem,
+  autoLineCount: 3,
+  autoLineHeight: 4.5rem
+);
+
+// end of gridlovers generated scss
+
+$scales: (
+  -2: $scale-2,
+  -1: $scale-1,
+  0: $scale0,
+  1: $scale1,
+  2: $scale2,
+  3: $scale3,  
+  4: $scale4
+  5: $scale5
+);
+
+@mixin scale ($factor){  
+  font-size: map-get(map-get($scales,$factor), fontSize);
+  line-height: map-get(map-get($scales,$factor), autoLineHeight);
+  margin: map-get(map-get($scales,$factor), line) 0;
+}
+
+// hat tip to https://basehold.it for making the grid overlay content
+html.show-baseline-grid {
+  body {
+    position: relative;
+  }
+
+  body:after {
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: 9999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    // hat tip to https://github.com/hiulit/Sassy-Gridlover for the css only grid
+    background-image: linear-gradient($baseline-grid-color 1px, transparent 1px);
+    background-position: left top;
+    background-size: $baseline-line-height $baseline-line-height;
+    // box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
+  }
+
+  body:active:after {
+    display: none;
+  }  
+}

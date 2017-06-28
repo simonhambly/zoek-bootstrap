@@ -1,5 +1,5 @@
 {
-  "htmlClass": "hirer",
+  "htmlClass": "hirer show-baseline-grid",
   "hero": {
     "headline": "Main headline",
     "thePitch": "The pitch to explain the headline",
