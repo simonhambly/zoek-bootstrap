@@ -11,10 +11,8 @@
 
 
 $baseline-font-size: 16px;
-// $baseline-font-line-height-ratio: 1.5;
 $baseline-line-height: 24px;
 $baseline-grid-color: rgba(0, 170, 255, 0.3);
-// $baseline-grid-color: rgba(51, 76, 107, 0.3);
 
 // Generated from https://www.gridlover.net/try using the following values:
 //  - font-size: 16px
@@ -88,7 +86,7 @@ $scales: (
   1: $scale1,
   2: $scale2,
   3: $scale3,  
-  4: $scale4
+  4: $scale4,
   5: $scale5
 );
 
