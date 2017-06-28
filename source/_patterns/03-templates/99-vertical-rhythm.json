@@ -1,3 +1,9 @@
 {
-  "htmlClass": "show-baseline-grid"
+  "htmlClass": "show-baseline-grid",
+  "primaryButton": {
+    "buttonText": "Primary button"
+  },
+  "smallButton": {
+    "buttonText": "Small button"
+  }
 }

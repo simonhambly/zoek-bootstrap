@@ -34,6 +34,10 @@ $perfectFourthFontSizes: (
   @return ceil($font-size / $baseline-line-height);
 }
 
+@function baselineGridUnits($multiplier) {
+  @return $multiplier * $baseline-line-height;
+}
+
 @mixin fitToBaselineGrid ($scale) {
   $font-size: fontSizeForScale($scale);
   font-size: $font-size;
@@ -69,7 +73,7 @@ html.show-baseline-grid {
     background-image: linear-gradient($baseline-grid-color 1px, transparent 1px);
     background-position: left top;
     background-size: $baseline-line-height $baseline-line-height;
-    // box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
+    box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
   }
 
   body:active:after {
