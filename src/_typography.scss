@@ -38,8 +38,20 @@ html {
   line-height: 1.3rem;
 }
 
+body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-kerning: normal;
+  hyphens: auto;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $primary-font-stack;
+  text-rendering: optimizeLegibility;
 }
 
 // TODO: sort max-wdith on these based on rem
