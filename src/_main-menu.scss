@@ -1,0 +1,25 @@
+nav.main-menu {
+  flex: 0 1 auto;
+
+  background-color: $brand-color-pink-140;
+  color: $color-secondary-white;
+  min-width: 10em;
+}
+
+nav.main-menu a{
+  color: $color-secondary-white;
+  text-decoration: none;
+}
+
+
+nav.main-menu {
+  display: none;
+}
+
+body.main-menu__displayed nav.main-menu{
+  display: unset;
+}
+
+body.main-menu_displayed .content-container {
+  margin-left: -baselineGridUnits(4);
+}
