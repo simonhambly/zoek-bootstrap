@@ -1,15 +1,24 @@
-{{> organisims-site-header }}
+<section class="content-container">
 
-<section class="hero">
-  {{# hero }}
-  {{> molecules-hero-block }}
-  {{/ hero }}
+  {{> organisims-site-header }}
+
+  <main>
+    <section class="hero">
+      {{# hero }}
+      {{> molecules-hero-block }}
+      {{/ hero }}
+    </section>
+
+    <section class="pitches">
+      {{# pitches }}
+      {{> molecules-pitch-block }}
+      {{/ pitches }}
+    </section>
+  </main>
+
+  {{> organisims-site-footer }}
+
 </section>
 
-<section class="pitches">
-  {{# pitches }}
-  {{> molecules-pitch-block }}
-  {{/ pitches }}
-</section>
-
-{{> organisims-site-footer }}
+{{! should this really be an organisim }}
+{{> organisims-site-navigation}}

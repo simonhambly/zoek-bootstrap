@@ -1,26 +1,73 @@
 
-
-html {
-  background-color: $color-brand-cyan;
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
-html.hirer {
-  background-color: $color-brand-dark-blue-80;  
+main {
+  flex: 1 1 auto;
+  align-self: stretch;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+.content-container {
+  flex: 0 1 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-self: stretch;
 }
 
-body > footer {
+footer.site-footer {
+  flex: 0 1 auto;
+
   background-color: $color-brand-dark-blue-140;
-  color: $color-brand-dark-blue-20; 
+  color: $color-secondary-grey;
+  padding: 0 baselineGridUnits(0.5);
 }
 
+section.hero {
+  flex: 0 1 auto;
 
+  background: $color-brand-dark-blue-80;
+  background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
+  background-position: bottom center, top center;
+  background-repeat: repeat-x;
+  color: $color-secondary-white;
+
+  padding: baselineGridUnits(4) baselineGridUnits(0.5);
+}
 section.pitches {
-    padding-top: 93px;
-    background-image: url(../images/clouds.svg);
-    background-position: top center;
-    background-repeat: repeat-x;
+  flex: 0 1 auto;        
+  padding: 0 baselineGridUnits(0.5);
 }
 
-article.pitch {
-  background-color: $color-secondary-white;
+nav.main-menu {
+  flex: 0 1 auto;
+
+  background-color: $brand-color-pink-140;
+  color: $color-secondary-white;
+  min-width: 10em;
+}
+
+nav.main-menu a{
+  color: $color-secondary-white;
+  text-decoration: none;
+}
+
+
+nav.main-menu {
+  display: none;
+}
+
+body.main-menu__displayed nav.main-menu{
+  display: unset;
+}
+
+body.main-menu_displayed .content-container {
+  margin-left: -baselineGridUnits(4);
 }

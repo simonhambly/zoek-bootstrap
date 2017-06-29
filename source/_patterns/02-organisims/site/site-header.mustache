@@ -1,14 +1,11 @@
-<header>
-  <div class="site-header">
-    {{^ isHirer }}
-    <img class="site-logo" src="/images/zoek-logo.svg"/>
-    {{/ isHirer }}
-    {{# isHirer }}
-    <img class="site-logo" src="/images/zoek-hirer-logo.svg"/>
-    {{/ isHirer }}
+<header class="site-header">
+  {{^ isHirer }}
+  <img class="site-logo" src="/images/zoek-logo.svg"/>
+  {{/ isHirer }}
+  {{# isHirer }}
+  <img class="site-logo" src="/images/zoek-hirer-logo.svg"/>
+  {{/ isHirer }}
 
-    <img class="main-menu-toggle" src="/images/menu-icon-hirer.svg"/>
-    {{!> organisims-site-navigation }}
-  </div>
+  {{! TODO: change this to menu toggle atom }}
+  <img class="main-menu-toggle" src="/images/menu-icon-hirer.svg"/>
 </header>
-<main>

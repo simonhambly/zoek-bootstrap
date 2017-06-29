@@ -27,7 +27,7 @@ $perfectFourthFontSizes: (
 );
 
 @function fontSizeForScale ($scale) {
-  @return map-get($perfectFourthFontSizes, $scale)
+  @return map-get($perfectFourthFontSizes, $scale);
 }
 
 @function lineCount ($font-size) {
