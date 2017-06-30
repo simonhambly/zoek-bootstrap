@@ -34,7 +34,7 @@ function normalizePath() {
 ******************************************************/
 // JS copy
 gulp.task('pl-copy:js', function () {
-  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+  return gulp.src(['*.*', '**/*.*'], {cwd: normalizePath(paths().source.js)} )
     .pipe(gulp.dest(normalizePath(paths().public.js)));
 });
 

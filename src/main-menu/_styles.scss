@@ -1,9 +1,14 @@
+
+$menu-width: baselineGridUnits(8);
+
 nav.main-menu {
   flex: 0 1 auto;
 
-  background-color: $brand-color-pink-140;
+  background-color: $color-brand-pink;
   color: $color-secondary-white;
-  min-width: 10em;
+  min-width: $menu-width;
+
+  padding-left: baselineGridUnits(1);
 }
 
 nav.main-menu a{
@@ -20,6 +25,32 @@ body.main-menu__displayed nav.main-menu{
   display: unset;
 }
 
-body.main-menu_displayed .content-container {
-  margin-left: -baselineGridUnits(4);
+body.main-menu__displayed .content-container {
+  margin-left: -1 * $menu-width;
+}
+
+input[type="checkbox"]#menu-toggle {
+  display:inline-block;
+  opacity: 0;
+
+  & + label::after{
+    content: "";
+    display:inline-block;
+    width: baselineGridUnits(1);
+    height: baselineGridUnits(1);
+    vertical-align:middle;
+    background: url('../images/menu-icon-hirer.svg') center top no-repeat;
+    background-size: baselineGridUnits(1) baselineGridUnits(1);
+    cursor:pointer;
+  }
+
+  // &:focus + label::after{
+  //   background: url('../images/svgs/checkbox-focus.svg') center top no-repeat;
+  // }
+
+  &:checked + label::after{
+    background:url('../images/menu-icon.svg') left top no-repeat;
+    background-size: baselineGridUnits(1) baselineGridUnits(1);
+  }
+
 }
