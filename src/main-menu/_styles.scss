@@ -19,6 +19,11 @@ nav.main-menu a{
 
 nav.main-menu {
   display: none;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 body.main-menu__displayed nav.main-menu{
