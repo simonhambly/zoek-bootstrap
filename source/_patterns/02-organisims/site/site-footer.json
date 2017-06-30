@@ -1,0 +1,20 @@
+{
+  "footerMenu": [
+    { 
+      "href": "#",
+      "text": "link one"
+    },
+    { 
+      "href": "#",
+      "text": "link two"
+    },
+    { 
+      "href": "#",
+      "text": "link three"
+    },
+    { 
+      "href": "#",
+      "text": "link four"
+    }
+  ]
+}

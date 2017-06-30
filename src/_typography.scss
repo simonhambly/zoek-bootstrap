@@ -124,6 +124,13 @@ ul, ol {
   padding-left: 1.5rem; //TODO feels like this should be related to line-height
 }
 
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  } 
+}
+
 pre {
   background-color: $color-neutral-10;
   border: 1px solid $color-neutral-30;

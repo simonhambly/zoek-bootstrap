@@ -1,6 +1,8 @@
 <footer class="site-footer">
-  <p>various footer menu links</p>
-  <p>links to marketing pages</p>
-  <p>links to T&Cs etc</p>
-  <p>social links</p>
+  <nav>
+    {{# footerMenu }}
+    <ul>
+      <li><a href={{ href }} >{{ text }}</a></li>
+    </ul>
+    {{/ footerMenu }}
 </footer>
