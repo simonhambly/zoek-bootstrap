@@ -18,6 +18,24 @@
       "thePitch": "Explaining Pitch 2"
     }
   ],
+  "siteMenu": [
+    { 
+      "href": "#",
+      "text": "page one"
+    },
+    { 
+      "href": "#",
+      "text": "page two"
+    },
+    { 
+      "href": "#",
+      "text": "page three"
+    },
+    { 
+      "href": "#",
+      "text": "page four"
+    }
+  ],
   "footerMenu": [
     { 
       "href": "#",
