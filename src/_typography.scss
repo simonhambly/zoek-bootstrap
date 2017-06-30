@@ -137,6 +137,12 @@ pre {
   overflow-x: scroll;
   padding: 0.5rem;
   color: $color-neutral-60;
+  display: inline-block;
+
+  code {
+    display: inline-block;
+    width: 350px;
+  }
 }
 
 strong {
