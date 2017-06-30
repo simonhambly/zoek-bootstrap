@@ -1,14 +1,19 @@
 section.hero {
   flex: 0 1 auto;
 
-  background: $color-brand-dark-blue-80;
+  background-color: $color-brand-cyan;
   background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
   background-position: bottom center, top center;
   background-repeat: repeat-x;
-  color: $color-secondary-white;
 
   padding: baselineGridUnits(4) baselineGridUnits(0.5);
 }
+
+html.hirer section.hero {
+  background-color: $color-brand-dark-blue-80;
+  color: $color-secondary-white;
+}
+
 section.pitches {
   flex: 0 1 auto;        
   padding: 0 baselineGridUnits(0.5);
