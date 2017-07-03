@@ -1,6 +1,6 @@
 {
-  "htmlClass": "hirer show-baseline-grid",
-  "isHirer": true,
+  "htmlClass": "show-baseline-grid",
+  "isHirer": false,
   "hero": {
     "headline": "Main headline",
     "thePitch": "The pitch to explain the headline",

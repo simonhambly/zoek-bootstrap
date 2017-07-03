@@ -4,27 +4,30 @@ $menu-width: baselineGridUnits(8);
 nav.main-menu {
   flex: 0 1 auto;
 
-  background-color: $color-brand-pink;
+  background-color: $color-brand-dark-blue;
   color: $color-secondary-white;
   min-width: $menu-width;
 
   padding-left: baselineGridUnits(1);
-}
 
-nav.main-menu a{
-  color: $color-secondary-white;
-  text-decoration: none;
-}
-
-
-nav.main-menu {
   display: none;
 
   ul {
     list-style: none;
     padding-left: 0;
   }
+
+  & a{
+    color: $color-secondary-white;
+    text-decoration: none;
+  }
+
 }
+
+html.hirer nav.main-menu {
+  background-color: $color-brand-pink;
+}
+
 
 body.main-menu__displayed nav.main-menu{
   display: unset;
@@ -32,6 +35,11 @@ body.main-menu__displayed nav.main-menu{
 
 body.main-menu__displayed .content-container {
   margin-left: -1 * $menu-width;
+}
+
+
+@mixin menu-toggle-background-size {
+  background-size: baselineGridUnits(1) baselineGridUnits(1);
 }
 
 input[type="checkbox"]#menu-toggle {
@@ -44,8 +52,8 @@ input[type="checkbox"]#menu-toggle {
     width: baselineGridUnits(1);
     height: baselineGridUnits(1);
     vertical-align:middle;
-    background: url('../images/menu-icon-hirer.svg') center top no-repeat;
-    background-size: baselineGridUnits(1) baselineGridUnits(1);
+    background: url('../images/menu-icon.svg') left top no-repeat;
+    @include menu-toggle-background-size;
     cursor:pointer;
   }
 
@@ -54,8 +62,21 @@ input[type="checkbox"]#menu-toggle {
   // }
 
   &:checked + label::after{
-    background:url('../images/menu-icon.svg') left top no-repeat;
-    background-size: baselineGridUnits(1) baselineGridUnits(1);
+    background:url('../images/menu-icon-open.svg') left top no-repeat;
+    @include menu-toggle-background-size;
   }
 
+}
+
+html.hirer input[type="checkbox"]#menu-toggle {
+
+  & + label::after{
+    background: url('../images/menu-icon-hirer.svg') left top no-repeat;
+    @include menu-toggle-background-size;
+  }
+
+  &:checked + label::after{
+    background: url('../images/menu-icon-hirer-open.svg') left top no-repeat;
+    @include menu-toggle-background-size;
+  }
 }
