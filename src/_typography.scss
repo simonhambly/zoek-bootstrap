@@ -107,7 +107,24 @@ h4 {
   @include fitToBaselineGrid(0);
 }
 
-p,
+p
+{
+  @include fitToBaselineGrid(0);
+  margin-top: 0;
+}
+
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  margin-top: 0;
+}
+
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
+  margin-top: 0;
+} 
+
+p + ul li:first-of-type, p + ol li:first-of-type {
+  margin-top:0;
+}
+
 ul li,
 ol li
 {
@@ -115,13 +132,13 @@ ol li
 }
 
 small {
-  // @include fitToBaselineGrid(-1);
-  font-size: 0.75rem;
+  @include fitToBaselineGrid(-1);
   line-height: 1.25rem; //TODO: why is this .25rem less than line-height of the p tag?
 }
 
 ul, ol {
   padding-left: 1.5rem; //TODO feels like this should be related to line-height
+  margin: 0;
 }
 
 a {

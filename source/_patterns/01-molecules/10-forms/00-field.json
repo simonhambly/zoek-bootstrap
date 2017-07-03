@@ -1,4 +1,5 @@
 {
+  "htmlClass": "show-baseline-grid",
   "id": "postCode",
   "label": "post Code",
   "type": "text",

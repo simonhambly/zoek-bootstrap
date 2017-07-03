@@ -15,19 +15,20 @@
 
 input[type=text], input[type=password], textarea {
   color: $color-neutral-80;
-  padding: 0.5rem 0.25rem;
   letter-spacing: 0.05rem;
   border-radius: 0.25rem;
   border: 1px solid $color-neutral-30;
   width: 100%;
+  height: baselineGridUnits(2);
+  @include fitToBaselineGrid(0);
+  margin:0;
 }
 
 div.field {
   label {
     color: $color-brand-dark-blue;
-    font-size: $font-size-s;
-    // margin-bottom: 0.25rem;
-    padding: 0.25rem;
+    @include fitToBaselineGrid(0);
+    margin-bottom: 0;
     display: block;
     @include sentence-case;
 
@@ -39,7 +40,9 @@ div.field {
   div.field__note {
     font-size: $font-size-s;
     color: $color-neutral-60;
-    padding: 0.25rem;
+    @include fitToBaselineGrid(-1);
+    margin: 0;
+
     @include sentence-case;
 
     &.respect-case {
@@ -50,7 +53,9 @@ div.field {
   div.field__validation-message {
     font-size: $font-size-s;
     background-color: $color-utility-caution;
-    padding: 0.25rem;
+    @include fitToBaselineGrid(-1);
+    margin: 0;
+
     @include sentence-case;
 
     &.respect-case {
