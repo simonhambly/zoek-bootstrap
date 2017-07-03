@@ -1,0 +1,10 @@
+{
+  "href": "#",
+  "title": "image title",
+  "class": "image-link",
+  "image": {
+    "class": "placeholder-logo",
+    "src": "http://placeholder.pics/svg/45/i",
+    "altText": "link image"
+  }
+}

@@ -13,4 +13,15 @@ footer.site-footer {
   li a {
     color: $color-brand-dark-blue-20;
   }
+
+  ul.social-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    li {
+      flex: 0 1 auto;
+      text-align: center;
+    }
+  }
 }

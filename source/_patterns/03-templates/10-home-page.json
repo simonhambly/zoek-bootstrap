@@ -53,5 +53,47 @@
       "href": "#",
       "text": "link four"
     }
+  ],
+   "socialLinks": [
+    {
+      "href": "https://www.facebook.com/Zoek-App-385491041619205/",
+      "title": "Find us on facebook",
+      "class": "facebook-page",
+      "image": {
+        "class": "facebook-logo",
+        "src": "/images/facebook-icon.svg",
+        "altText": "facebook logo"
+      }
+    },
+    {
+      "href": "https://twitter.com/zoekappuk",
+      "title": "Follow us on Twitter",
+      "class": "twitter-page",
+      "image": {
+        "class": "twitter-logo",
+        "src": "/images/twitter-icon.svg",
+        "altText": "twitter logo"
+      }
+    },
+    {
+      "href": "https://www.linkedin.com/company/8072722?trk=tyah&trkInfo=idx%3A2-1-2%2CtarId%3A1423832980208%2Ctas%3Azoek+application",
+      "title": "Join us on Linkedin",
+      "class": "linkedin-page",
+      "image": {
+        "class": "linkedin-logo",
+        "src": "/images/linkedin-icon.svg",
+        "altText": "Linkedin logo"
+      }
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCIcrRPbjzPR23m_Byx0uUYg",
+      "title": "Follow us on You Tube",
+      "class": "youtube-page",
+      "image": {
+        "class": "youtube-logo",
+        "src": "/images/youtube-icon.svg",
+        "altText": "You Tube logo"
+      }
+    }
   ]
 }
