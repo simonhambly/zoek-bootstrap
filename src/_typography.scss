@@ -92,25 +92,25 @@ h1, h2, h3, h4, h5, h6 {
 
 // TODO: sort max-wdith on these based on rem
 h1 {
-  @include fitToBaselineGrid(4);
-}
-
-h2 {
   @include fitToBaselineGrid(3);
 }
 
-h3 {
+h2 {
   @include fitToBaselineGrid(2);
 }
 
-h4 {
+h3 {
   @include fitToBaselineGrid(1);
+}
+
+h4 {
+  @include fitToBaselineGrid(0);
 }
 
 p,
 ul li,
 ol li
- {
+{
   @include fitToBaselineGrid(0);
 }
 
