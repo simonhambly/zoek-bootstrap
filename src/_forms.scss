@@ -13,8 +13,8 @@
   @include placeholder;
 }
 
-input[type=text], input[type=password], textarea {
-  color: $color-neutral-80;
+inputinput[type=text], input[type=password], textarea {
+  color: $color-brand-pink;
   letter-spacing: 0.05rem;
   border-radius: 0.5rem;
   border: 1px solid $color-neutral-30;
@@ -23,6 +23,12 @@ input[type=text], input[type=password], textarea {
   height: baselineGridUnits(2);
   @include fitToBaselineGrid(0);
   margin:0;
+
+  outline: none;
+
+  &:focus {
+    border-color: $color-brand-pink;
+  }
 }
 
 div.field {
@@ -92,5 +98,20 @@ main.single-form {
   p {
     text-align: center;
     margin-top: baselineGridUnits(1)
+  }
+}
+
+html.hirer {
+  main.single-form {
+  //TODO this needs DRY'ing
+    background-color: $color-brand-dark-blue-80;
+
+    & > p {
+      color: $color-secondary-white;
+
+      a {
+        color: $color-brand-pink-80;
+      }
+    }
   }
 }
