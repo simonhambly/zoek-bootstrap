@@ -5,19 +5,24 @@ footer.site-footer {
   color: $color-secondary-grey;
   padding: 0 baselineGridUnits(0.5);
 
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
+  nav {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-  li a {
-    color: $color-brand-dark-blue-20;
+    li a {
+      color: $color-brand-dark-blue-20;
+    }
   }
 
   ul.social-links {
+    list-style: none;
+    padding-left: 0;
+
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     li {
       flex: 0 1 auto;

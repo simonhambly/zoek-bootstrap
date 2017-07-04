@@ -42,7 +42,7 @@ $perfectFourthFontSizes: (
   $font-size: fontSizeForScale($scale);
   font-size: $font-size;
   line-height: lineCount($font-size) * $baseline-line-height;
-  margin: $baseline-line-height 0;
+  margin: 0 0 $baseline-line-height 0;
 }
 
 body {
