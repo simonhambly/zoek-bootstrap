@@ -74,19 +74,9 @@ div.field {
 }
 
 // TODO: what?! and where does this all fit — what is concrete and what is grid?
-main.single-form {
-  //TODO this needs DRY'ing
-  background-color: $color-brand-cyan;
-  background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
-  background-position: bottom center, top center;
-  background-repeat: repeat-x;
-  padding: baselineGridUnits(5) baselineGridUnits(0.5) baselineGridUnits(4) baselineGridUnits(0.5);
+section.form-container {
 
-  .form-container {
-    background-color: $color-secondary-white;
-    padding: 0 baselineGridUnits(0.5);
-    border-radius: 0.5rem;
-  }
+  @include card;
 
   form {
     h2 {
@@ -101,17 +91,21 @@ main.single-form {
   }
 }
 
+section.form-footnotes {
+  p {
+    text-align: center;
+    margin-top: baselineGridUnits(1)
+  }  
+}
+
 html.hirer {
-  main.single-form {
-  //TODO this needs DRY'ing
-    background-color: $color-brand-dark-blue-80;
+  section.form-footnotes {
 
-    & > p {
+    p {
       color: $color-secondary-white;
-
-      a {
-        color: $color-brand-pink-80;
-      }
+    }
+    a {
+      color: $color-brand-pink-80;
     }
   }
 }

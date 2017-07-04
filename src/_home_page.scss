@@ -1,20 +1,23 @@
+
+
 section.hero {
   flex: 0 1 auto;
 
-  background-color: $color-brand-cyan;
-  background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
-  background-position: bottom center, top center;
-  background-repeat: repeat-x;
-
-  padding: baselineGridUnits(4) baselineGridUnits(0.5);
+  @include clouds-from-above;
+  padding: 0 baselineGridUnits(0.5) baselineGridUnits(5) baselineGridUnits(0.5);
 }
 
 html.hirer section.hero {
-  background-color: $color-brand-dark-blue-80;
   color: $color-secondary-white;
 }
 
 section.pitches {
   flex: 0 1 auto;        
   padding: 0 baselineGridUnits(0.5);
+  background-color: $color-secondary-white
+}
+
+html.home main,
+html.home.hire main {
+  @include clouds-from-below;  
 }

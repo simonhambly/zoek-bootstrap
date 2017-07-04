@@ -1,4 +1,25 @@
 
+@mixin clouds-from-below {
+  background-image: url(../images/clouds-upsidedown.svg);
+  background-position: top center;
+  background-repeat: repeat-x;  
+  padding: baselineGridUnits(5) 0 0 0;
+}
+
+@mixin clouds-from-above {
+  background-image: url(../images/clouds.svg);
+  background-position: bottom center;
+  background-repeat: repeat-x;  
+}
+
+@mixin clouds{
+  background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
+  background-position: bottom center, top center;
+  background-repeat: repeat-x;  
+  padding: baselineGridUnits(5) 0 baselineGridUnits(5) 0;
+}
+
+
 body {
   display: flex;
   flex-flow: row nowrap;
@@ -6,6 +27,9 @@ body {
 }
 
 main {
+  background-color: $color-brand-cyan;
+  @include clouds;
+
   flex: 1 1 auto;
   align-self: stretch;
 
@@ -20,4 +44,25 @@ main {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-self: stretch;
+}
+
+html.hirer main {
+  @include clouds;
+  background-color: $color-brand-dark-blue-80;
+}
+
+@mixin card {
+  padding: baselineGridUnits(1) baselineGridUnits(0.5) 0 baselineGridUnits(0.5);
+  margin: 0 baselineGridUnits(0.5);  
+  background-color: $color-secondary-white;
+  border-radius: 0.5rem;
+}
+
+main > article {
+  @include card;
+  margin-bottom: baselineGridUnits(1);
+}
+
+main > aside {
+  @include card;  
 }

@@ -1,3 +1,4 @@
 {
-  "htmlClass": "hirer"
+  "htmlClass": "hirer",
+  "isHirer": true
 }

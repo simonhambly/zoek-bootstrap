@@ -2,16 +2,17 @@
 
   {{> organisims-site-header }}
 
-  <main class="single-form">
-    <div class="form-container">
+  <main>
+    <section class="form-container">
     {{# loginForm }}
     {{> organisims-stacked-form }}
     {{/ loginForm }}
 
     <p>{{# forgottenPasswordLink }}{{> atoms-link}}{{/ forgottenPasswordLink }}</p>
-    </div>
-
-    <p>Not registered? {{# createAccountLink }}{{> atoms-link}}{{/ createAccountLink }}</p>
+    </section>
+    <section class="form-footnotes">
+      <p>Not registered? {{# createAccountLink }}{{> atoms-link}}{{/ createAccountLink }}</p>
+    </section>
   </main>
 
   {{> organisims-site-footer }}

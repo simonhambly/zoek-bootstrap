@@ -1,23 +1,6 @@
 {
-  "htmlClass": "home show-baseline-grid",
+  "htmlClass": "show-baseline-grid",
   "isHirer": false,
-  "hero": {
-    "headline": "Main headline",
-    "thePitch": "The pitch to explain the headline",
-    "cta": {
-      "buttonText": "Call to action"
-    }
-  },
-  "pitches": [
-    {
-      "headline": "Pitch 1",
-      "thePitch": "Naturally soured by farm valley winds blowing wild yeast into our oak casks. Finally, after a year and a half of patient coaxing Wisconsin dark malts whirl in a kaleidoscope of cedar, caramel and tart green plum exuberance. Available to the exclusive few who travel off the beaten paths, this is authentic Wisconsin sour brown ale. Truly unique this Sour Ale is brewed for those who live on the wild side and is suitable for laying down or consuming immediately, serve at 40 – 45 °F."
-    },
-    {
-      "headline": "Pitch 2",
-      "thePitch": "Explaining Pitch 2"
-    }
-  ],
   "siteMenu": [
     { 
       "href": "#",
