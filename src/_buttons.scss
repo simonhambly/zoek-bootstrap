@@ -9,7 +9,7 @@ button {
   letter-spacing: 0.03rem;
   
   line-height: baselineGridUnits(1);
-  margin: baselineGridUnits(1) 0;
+  margin: baselineGridUnits(0.5) 0;
   height: baselineGridUnits(2);
 
   width: 100%;
@@ -28,7 +28,7 @@ button.primary-button {
 button.small-button {
   font-size: fontSizeForScale(-1);
   // 3rem = x2 baseline units
-  margin: 0.5rem 0;
+  margin: 1.25rem 0; //TODO: DRY this out 1.25rem this is same as small text
   height: 2rem;
 }
 
@@ -53,7 +53,11 @@ ul.button-group {
   list-style: none;
   padding-left: 0;
 
-  & li {
-    margin: 1rem 0.3rem;
+  li {
+    margin: 0;
+  }
+
+  li + li button {
+    margin-top: 0;
   }
 }

@@ -16,8 +16,9 @@
 input[type=text], input[type=password], textarea {
   color: $color-neutral-80;
   letter-spacing: 0.05rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   border: 1px solid $color-neutral-30;
+  padding: 0 baselineGridUnits(0.5); //TODO: gutter? 
   width: 100%;
   height: baselineGridUnits(2);
   @include fitToBaselineGrid(0);
@@ -25,6 +26,8 @@ input[type=text], input[type=password], textarea {
 }
 
 div.field {
+  margin-bottom: baselineGridUnits(1);
+
   label {
     color: $color-brand-dark-blue;
     @include fitToBaselineGrid(0);
@@ -61,5 +64,33 @@ div.field {
     &.respect-case {
       @include respect-case;
     }
+  }
+}
+
+// TODO: what?! and where does this all fit — what is concrete and what is grid?
+main.single-form {
+  //TODO this needs DRY'ing
+  background-color: $color-brand-cyan;
+  background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
+  background-position: bottom center, top center;
+  background-repeat: repeat-x;
+  padding: baselineGridUnits(5) baselineGridUnits(0.5) baselineGridUnits(4) baselineGridUnits(0.5);
+
+  .form-container {
+    background-color: $color-secondary-white;
+    padding: 0 baselineGridUnits(0.5);
+    border-radius: 0.5rem;
+  }
+
+  form {
+    h2 {
+      text-align: center;
+      font-family: "AvenirLTStd-Black";
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: baselineGridUnits(1)
   }
 }
