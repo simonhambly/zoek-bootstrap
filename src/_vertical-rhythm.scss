@@ -34,7 +34,7 @@ $perfectFourthFontSizes: (
   @return ceil($font-size / $baseline-line-height);
 }
 
-@function baselineGridUnits($multiplier) {
+@function baselineGridUnits ($multiplier) {
   @return $multiplier * $baseline-line-height;
 }
 

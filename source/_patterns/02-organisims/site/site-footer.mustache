@@ -1,11 +1,13 @@
 <footer class="site-footer">
-  <nav>
-    {{# footerMenu }}
-    <ul>
-      <li><a href={{ href }} >{{ text }}</a></li>
-    </ul>
-    {{/ footerMenu }}
-  </nav>
+  <div class="contents">
+    {{> molecules-social-links }}
 
-  {{> molecules-social-links }}
+    <nav>
+      {{# footerMenu }}
+      <ul>
+        <li><a href={{ href }} >{{ text }}</a></li>
+      </ul>
+      {{/ footerMenu }}
+    </nav>
+  </div>
 </footer>

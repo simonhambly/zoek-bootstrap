@@ -1,10 +1,12 @@
 <header class="site-header">
-  {{^ isHirer }}
-  <img class="site-logo" src="/images/zoek-logo.svg"/>
-  {{/ isHirer }}
-  {{# isHirer }}
-  <img class="site-logo" src="/images/zoek-hirer-logo.svg"/>
-  {{/ isHirer }}
+  <div class="contents">
+    {{^ isHirer }}
+    <img class="site-logo" src="/images/zoek-logo.svg"/>
+    {{/ isHirer }}
+    {{# isHirer }}
+    <img class="site-logo" src="/images/zoek-hirer-logo.svg"/>
+    {{/ isHirer }}
 
-  {{> atoms-menu-toggle }}
+    {{> atoms-menu-toggle }}
+  </div>
 </header>

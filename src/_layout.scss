@@ -30,13 +30,17 @@ main {
   background-color: $color-brand-cyan;
   @include clouds;
 
-  flex: 1 1 auto;
+  flex: 1 1 auto; // flex-grow 1 (when header/footer flex-grow = 0 => full height main
   align-self: stretch;
 
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: flex-start;
+
+  @include small-screen-up {
+    padding-left: $gutter-width/2;
+    padding-right: $gutter-width/2;
+  }
 }
+
 .content-container {
   flex: 0 1 100%;
 
@@ -52,17 +56,31 @@ html.hirer main {
 }
 
 @mixin card {
-  padding: baselineGridUnits(1) baselineGridUnits(0.5) 0 baselineGridUnits(0.5);
-  margin: 0 baselineGridUnits(0.5);  
+  padding-top: baselineGridUnits(1);
+  padding-right: baselineGridUnits(0.5);
+  padding-left: baselineGridUnits(0.5);
   background-color: $color-secondary-white;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
 }
 
-main > article {
-  @include card;
-  margin-bottom: baselineGridUnits(1);
+@mixin contents-positioning {
+  max-width: $large-screen-breakpoint;
+  margin: 0 auto;
 }
 
-main > aside {
-  @include card;  
+main .contents {
+
+  @include grid;
+  @include contents-positioning;
+
+  & > article {
+    @include grid-weight(8);
+    @include card;
+    margin-bottom: baselineGridUnits(1);
+  }
+
+  & > aside {
+    @include grid-weight(4);
+    margin-bottom: baselineGridUnits(1); // needed to balance length when on larger screens
+  }
 }

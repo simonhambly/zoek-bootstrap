@@ -1,3 +1,6 @@
+$small-screen-breakpoint: 48rem;
+$large-screen-breakpoint: 72rem;
+
 @mixin clearfix() {
   &::after {
     display: block;
@@ -8,4 +11,16 @@
 
 span.screen-reader {
   display: none;
+}
+
+@mixin small-screen-up {
+  @media screen and (min-width: $small-screen-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-screen-up {
+  @media screen and (min-width: $large-screen-breakpoint) {
+    @content;
+  }
 }
