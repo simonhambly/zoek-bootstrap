@@ -3,29 +3,63 @@ footer.site-footer {
 
   background-color: $color-secondary-white;
   color: $color-brand-dark-blue;
-  padding: baselineGridUnits(1) baselineGridUnits(0.5) 0 baselineGridUnits(0.5);
+  padding: baselineGridUnits(1) baselineGridUnits(0.5);
 
   .contents {
     @include contents-positioning;
-  }
+    @include grid;
 
-  nav {
-    li a {
-      color: $color-brand-dark-blue-80;
+    & > div.social-links {
+      @include grid-weight(3);
     }
-  }
 
-  ul.social-links {
-    list-style: none;
-    padding-left: 0;
+    & > div.footer-navigation {
+      @include grid-weight(9);
+    }
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    nav {
+      margin-top: baselineGridUnits(1);
 
-    li {
-      flex: 0 1 auto;
-      text-align: center;
+      ul {        
+        list-style: none;
+        padding-left: 0;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        @include small-screen-up {
+          justify-content: flex-end;        
+        }
+
+        li {
+          flex: 0 1 auto;
+          text-align: center;
+          padding-left: $gutter-width;
+        }
+        li a {
+          display: inline-block;
+          @include sentence-case;
+          @include font-stack-medium;
+          color: $color-brand-dark-blue-80;
+        }
+      }
+    }
+
+    ul.social-links {      
+      list-style: none;
+      padding-left: 0;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      li {
+        flex: 0 1 auto;
+        text-align: center;
+        margin-top: baselineGridUnits(0.5);
+        margin-bottom: 0;
+      }
     }
   }
 }
