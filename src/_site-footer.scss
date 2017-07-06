@@ -1,8 +1,8 @@
 footer.site-footer {
   flex: 0 1 auto;
 
-  background-color: $color-brand-dark-blue-140;
-  color: $color-secondary-grey;
+  background-color: $color-secondary-white;
+  color: $color-brand-dark-blue;
   padding: baselineGridUnits(1) baselineGridUnits(0.5) 0 baselineGridUnits(0.5);
 
   .contents {
@@ -11,7 +11,7 @@ footer.site-footer {
 
   nav {
     li a {
-      color: $color-brand-dark-blue-20;
+      color: $color-brand-dark-blue-80;
     }
   }
 
