@@ -32,6 +32,19 @@ $fonts-location : '../fonts';
 @font-face {font-family: 'AvenirLTStd-Book';src: url('#{$fonts-location}/312D2B_1_0.eot');src: url('#{$fonts-location}/312D2B_1_0.eot?#iefix') format('embedded-opentype'),url('#{$fonts-location}/312D2B_1_0.woff2') format('woff2'),url('#{$fonts-location}/312D2B_1_0.woff') format('woff'),url('#{$fonts-location}/312D2B_1_0.ttf') format('truetype');}
 @font-face {font-family: 'AvenirLTStd-Black';src: url('#{$fonts-location}/312D2B_2_0.eot');src: url('#{$fonts-location}/312D2B_2_0.eot?#iefix') format('embedded-opentype'),url('#{$fonts-location}/312D2B_2_0.woff2') format('woff2'),url('#{$fonts-location}/312D2B_2_0.woff') format('woff'),url('#{$fonts-location}/312D2B_2_0.ttf') format('truetype');}
 
+@mixin font-stack-heavy {
+  font-family: 'AvenirLTStd-Black', Helvetica, sans-serif;
+}
+
+@mixin font-stack-medium {
+  font-family: 'AvenirLTStd-Medium', Helvetica, sans-serif;
+  letter-spacing: 0.03rem;
+}
+
+@mixin font-stack-normal {
+  font-family: 'AvenirLTStd-Book', Helvetica, sans-serif;
+}
+
 $heading-font-stack: 'AvenirLTStd-Medium', Helvetica, sans-serif;
 $primary-font-stack: 'Nunito Sans', sans-serif;
 $secondary-font-stack: 'Open Sans', sans-serif;

@@ -9,15 +9,42 @@ header.site-header {
     justify-content: space-between;
   
     @include contents-positioning;
+  }
 
     img.site-logo {
       height: 3rem;
       flex: 0 1 auto;
     }
 
-    img.main-menu-toggle {
+    nav.desktop-menu {
       height: 1.5rem;
-      flex: 0 1 auto;
-    }  
-  }
+      flex: 0 1 auto;      
+      display: none;
+
+      @include small-screen-up {
+        display: block;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        li {
+          flex: 0 1 auto;
+          text-align: center;
+          padding-left: $gutter-width;
+
+          a {
+            display: inline-block;
+            @include sentence-case;
+            @include font-stack-medium;
+          }
+        }
+      }
+
+    }
 }

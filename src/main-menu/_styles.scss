@@ -1,6 +1,12 @@
 
 $menu-width: baselineGridUnits(8);
 
+.menu-toggle-container {
+  @include small-screen-up {
+    display: none;
+  }  
+}
+
 nav.main-menu {
   flex: 0 1 auto;
 
@@ -9,6 +15,7 @@ nav.main-menu {
   min-width: $menu-width;
 
   padding-left: baselineGridUnits(1);
+  padding-top: baselineGridUnits(1);
 
   display: none;
 
@@ -20,6 +27,9 @@ nav.main-menu {
   & a{
     color: $color-secondary-white;
     text-decoration: none;
+    display: inline-block;
+    @include sentence-case;
+    @include font-stack-medium;
   }
 
 }
