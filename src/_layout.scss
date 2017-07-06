@@ -53,13 +53,11 @@ main {
 html.hirer main {
   @include clouds;
   background-color: $color-brand-dark-blue-80;
+  color: $color-brand-dark-blue-20;
 }
 
 @mixin card {
   padding-top: baselineGridUnits(1);
-  padding-right: baselineGridUnits(0.5);
-  padding-left: baselineGridUnits(0.5);
-  border-radius: 0.25rem;
 }
 
 @mixin contents-positioning {
