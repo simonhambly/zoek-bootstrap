@@ -2,7 +2,6 @@
 import domready from 'domready'
 
 const toggleMenu = (targetSelector: string, menuOpenClass: string) => () => {
-  console.log("boo..")
   var target = document.querySelector(targetSelector)
   if (!target) return;
   target.classList.toggle(menuOpenClass);
