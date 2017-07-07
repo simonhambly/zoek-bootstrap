@@ -50,13 +50,14 @@ body {
   line-height: $baseline-line-height;  
 }
 
-// hat tip to https://basehold.it for making the grid overlay content
-html.show-baseline-grid {
-  body {
+// Need to display grid on header/footer/main as body & .content-container height is capped
+// at viewport height even when child content is larger.
+html.show-baseline-grid .content-container {
+  & > header, & > footer, & > main {
     position: relative;
   }
 
-  body:after {
+  & > header:after, & > footer:after, & > main:after {
     position: absolute;
     width: auto;
     height: auto;
@@ -76,7 +77,7 @@ html.show-baseline-grid {
     box-shadow: 1px 0px 0px $baseline-grid-color, -1px 0px 0px $baseline-grid-color;
   }
 
-  body:active:after {
+  & > header:active:after, & > footer:active:after, & > main:active:after {
     display: none;
   }  
 }
