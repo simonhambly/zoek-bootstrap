@@ -89,13 +89,25 @@ section.form-container {
     margin-top: baselineGridUnits(1)
   }
 }
+div.contents.single-form {
 
-section.form-footnotes {
+  
+  @include screen-larger-than ($small-screen-breakpoint / 2) {
+    max-width: $small-screen-breakpoint / 2;
+  }
+
+  form {
+    h2 {
+      text-align: center;
+    }
+  }
+
   p {
     text-align: center;
     margin-top: baselineGridUnits(1)
   }  
 }
+
 
 html.hirer {
   section.form-footnotes {

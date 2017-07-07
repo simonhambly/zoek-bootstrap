@@ -24,3 +24,9 @@ span.screen-reader {
     @content;
   }
 }
+
+@mixin screen-larger-than($min-width: $small-screen-breakpoint) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }  
+}
