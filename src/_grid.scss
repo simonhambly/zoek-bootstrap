@@ -1,4 +1,25 @@
+$small-screen-breakpoint: 48rem;
+$large-screen-breakpoint: 72rem;
 $gutter-width: baselineGridUnits(1);
+
+
+@mixin small-screen-up {
+  @media screen and (min-width: $small-screen-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-screen-up {
+  @media screen and (min-width: $large-screen-breakpoint) {
+    @content;
+  }
+}
+
+@mixin screen-larger-than($min-width: $small-screen-breakpoint) {
+  @media screen and (min-width: $min-width) {
+    @content;
+  }  
+}
 
 @mixin grid-weight ($flex-grow: 4) {
   flex: $flex-grow 1 0; //default flex-basis: 0 for IE10
