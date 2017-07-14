@@ -1,4 +1,21 @@
 {
   "htmlClass": "hirer",
-  "isHirer": true
+  "isHirer": true,
+  "loginForm": {
+    "fields": [
+      {
+        "id": "email",
+        "label": "Email address",
+        "type": "text",
+        "placeholder": "Your email address"
+      },
+      {
+        "id": "password",
+        "label": "Password",
+        "type": "password",
+        "placeholder": "Your password",
+        "note": "At least 8 characters including 1 number"
+      }
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 
 @mixin placeholder {
   color: $color-neutral-30;
-  @include sentence-case;
+  // @include sentence-case; // FIXME: this lowercases the whole placeholder ::first-letter is ignore for placeholders
 }
 ::-webkit-input-placeholder,
 ::-moz-placeholder,
@@ -18,7 +18,7 @@ input[type=text], input[type=password], textarea {
   letter-spacing: 0.05rem;
   border-radius: 0.5rem;
   border: 1px solid $color-neutral-30;
-  padding: 0 baselineGridUnits(0.5); //TODO: gutter? 
+  padding: 0 baselineGridUnits(0.3333); //TODO: gutter? 
   width: 100%;
   height: baselineGridUnits(2);
   @include fitToBaselineGrid(0);
@@ -37,6 +37,7 @@ div.field {
   label {
     color: $color-brand-dark-blue;
     @include fitToBaselineGrid(0);
+    padding: 0 baselineGridUnits(0.3333);
     margin-bottom: 0;
     display: block;
     @include sentence-case;
@@ -50,6 +51,7 @@ div.field {
     font-size: $font-size-s;
     color: $color-neutral-60;
     @include fitToBaselineGrid(-1);
+    padding: 0 baselineGridUnits(0.3333);
     margin: 0;
 
     @include sentence-case;
@@ -72,6 +74,18 @@ div.field {
     }
   }
 }
+
+html.hirer div.field {
+
+  label {
+    color: $color-brand-dark-blue-20;
+  }
+
+  div.field__note {
+    color: $color-brand-dark-blue-20
+  }
+}
+
 
 // TODO: what?! and where does this all fit — what is concrete and what is grid?
 section.form-container {
@@ -109,14 +123,12 @@ div.contents.single-form {
 }
 
 
-html.hirer {
-  section.form-footnotes {
+html.hirer div.contents.single-form{
 
-    p {
-      color: $color-secondary-white;
-    }
-    a {
-      color: $color-brand-pink-80;
-    }
+  p {
+    color: $color-secondary-white;
+  }
+  a {
+    color: $color-brand-cyan-60;
   }
 }
