@@ -13,6 +13,7 @@
     "flow": "flow",
     "gulp": "gulp",
     "install:normalize-scss": "cp -R ./node_modules/normalize-scss/sass/ ./src/normalize-scss",
+    "postversion": "git push && git push --tags",
     "start": "gulp patternlab:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
