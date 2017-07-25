@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build:patternlab": "gulp patternlab:build",
-    "build:css": "node-sass --recursive --include-path ./node_modules/normalize-scss/sass --output-style compressed --output ./source/css src/zoek-bootstrap.scss",
+    "build:cssx": "node-sass --recursive --include-path ./node_modules/normalize-scss/sass --output-style compressed --output ./source/css src/zoek-bootstrap.scss",
+    "build:css": "node-sass --recursive --output-style compressed --output ./source/css src/zoek-bootstrap.scss",
     "build:dev": "concurrently --kill-all --names 'Scaffolding,CSS,JS' --prefix '{name}-{time}' --timestamp-format 'HH:mm:ss' 'npm run build:scaffolding-css -- --watch' 'npm run build:css -- --watch' 'npm run build:js -- --watch'",
     "build:js": "rollup --config ./rollup.config.js",
     "build:scaffolding-css": "node-sass --recursive --output-style compressed --output ./source/css pattern-scaffolding/pattern-scaffolding.scss",
     "flow": "flow",
     "gulp": "gulp",
+    "install:normalize-scss": "cp -R ./node_modules/normalize-scss/sass/ ./src/normalize-scss",
     "start": "gulp patternlab:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
