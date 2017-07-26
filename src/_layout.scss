@@ -1,19 +1,19 @@
 
 @mixin clouds-from-below {
-  background-image: url(../images/clouds-upsidedown.svg);
+  background-image: url(../bootstrap/images/clouds-upsidedown.svg);
   background-position: top center;
   background-repeat: repeat-x;  
   padding: baselineGridUnits(5) 0 0 0;
 }
 
 @mixin clouds-from-above {
-  background-image: url(../images/clouds.svg);
+  background-image: url(../bootstrap/images/clouds.svg);
   background-position: bottom center;
   background-repeat: repeat-x;  
 }
 
 @mixin clouds{
-  background-image: url(../images/clouds.svg), url(../images/clouds-upsidedown.svg);
+  background-image: url(../bootstrap/images/clouds.svg), url(../bootstrap/images/clouds-upsidedown.svg);
   background-position: bottom center, top center;
   background-repeat: repeat-x;  
   padding: baselineGridUnits(5) 0 baselineGridUnits(5) 0;

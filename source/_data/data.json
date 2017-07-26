@@ -45,7 +45,7 @@
       "class": "facebook-page",
       "image": {
         "class": "facebook-logo",
-        "src": "/images/facebook-icon.svg",
+        "src": "/bootstrap/images/facebook-icon.svg",
         "altText": "facebook logo"
       }
     },
@@ -55,7 +55,7 @@
       "class": "twitter-page",
       "image": {
         "class": "twitter-logo",
-        "src": "/images/twitter-icon.svg",
+        "src": "/bootstrap/images/twitter-icon.svg",
         "altText": "twitter logo"
       }
     },
@@ -65,7 +65,7 @@
       "class": "linkedin-page",
       "image": {
         "class": "linkedin-logo",
-        "src": "/images/linkedin-icon.svg",
+        "src": "/bootstrap/images/linkedin-icon.svg",
         "altText": "Linkedin logo"
       }
     },
@@ -75,7 +75,7 @@
       "class": "youtube-page",
       "image": {
         "class": "youtube-logo",
-        "src": "/images/youtube-icon.svg",
+        "src": "/bootstrap/images/youtube-icon.svg",
         "altText": "You Tube logo"
       }
     }

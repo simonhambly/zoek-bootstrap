@@ -62,17 +62,17 @@ input[type="checkbox"]#menu-toggle {
     width: baselineGridUnits(1);
     height: baselineGridUnits(1);
     vertical-align:middle;
-    background: url('../images/menu-icon.svg') left top no-repeat;
+    background: url('../bootstrap/images/menu-icon.svg') left top no-repeat;
     @include menu-toggle-background-size;
     cursor:pointer;
   }
 
   // &:focus + label::after{
-  //   background: url('../images/svgs/checkbox-focus.svg') center top no-repeat;
+  //   background: url('../bootstrap/images/svgs/checkbox-focus.svg') center top no-repeat;
   // }
 
   &:checked + label::after{
-    background:url('../images/menu-icon-open.svg') left top no-repeat;
+    background:url('../bootstrap/images/menu-icon-open.svg') left top no-repeat;
     @include menu-toggle-background-size;
   }
 
@@ -81,12 +81,12 @@ input[type="checkbox"]#menu-toggle {
 html.hirer input[type="checkbox"]#menu-toggle {
 
   & + label::after{
-    background: url('../images/menu-icon-hirer.svg') left top no-repeat;
+    background: url('../bootstrap/images/menu-icon-hirer.svg') left top no-repeat;
     @include menu-toggle-background-size;
   }
 
   &:checked + label::after{
-    background: url('../images/menu-icon-hirer-open.svg') left top no-repeat;
+    background: url('../bootstrap/images/menu-icon-hirer-open.svg') left top no-repeat;
     @include menu-toggle-background-size;
   }
 }
