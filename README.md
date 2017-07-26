@@ -1,73 +1,70 @@
-# Installing
+# Zoek Bootstrap
+
+A standardised look and feel for applications at [zoek.uk](https://zoek.uk)
+
+
+## Installation
+
+Assuming you have node and npm installed and working, install by running
 
 ```sh
-$ npm install --save-dev patternlab-node
-$ npm install --save-dev edition-node-gulp
-$ npm install --save-dev starterkit-mustache-base styleguidekit-assets-default styleguidekit-mustache-default
+$ npm install --save-dev git+https://github.com/simonhambly/zoek-bootstrap.git#v0.2.4
 ```
 
-To enable local install of gulp, add this to `./package.json`
+(given this for internal use, we see no reason to pollute npm)
+
+### Unpacking assets
+
+zoek-bootstrap contains common assets (namely images and fonts) that need to be copied to your projects public assets. Out of the box the .scss designed to work with bootstrap assets in a folder named bootstrap, something akin to this directory structure:
+
+```
+project-public-folder
+├── _bootstrap
+|   ├──_fonts
+|   |  └── ...
+|   └──_images
+|      └── ...
+├── _js
+|   └── project.js
+├── _styles
+|   └── project.css
+```
+
+You can unpack the assets using the zoek-bootstrap cli. It's recommended you create a script in `package.json`:
 
 ```json
-  "scripts": {
-    "gulp": "gulp"
-  }
+  "bootstrap:assets": "zoek-bootstrap assets --clean --to ./public/bootstrap"
 ```
 
-## Copy the default gulpfile and config from the editions
+and run it to unpack the assets.
 
 ```sh
-cp node_modules/edition-node-gulp/gulpfile.js .
-cp node_modules/edition-node-gulp/patternlab-config.json .
+$ npm run bootstrap:assets 
 ```
 
-## Install the a starter kit
+Be warned zoek-bootstrap considers bootstrap it's own, so `--clean` removes the whole bootstrap directory, before copying the assets.
 
-Install the default mustache
+## Including in your project
 
-```sh
-npm run gulp -- patternlab:loadstarterkit --kit starterkit-mustache-bas
-```
-
-## npm scripts
+Add this script to `package.json` to automatically include the bootstrap .scss when you build
 
 ```json
-  "scripts": {
-    "gulp": "gulp",
-    "start": "gulp patternlab:serve"
-  }
+  "build:css": "node-sass --recursive --include-path ./node_modules/zoek-bootstrap/src --output-style compressed --output ./public/css src/main.scss",
 ```
 
+Bootstrap's .scss can be included at the start of your main .scss file like so
 
-## Fix that bug
-There's a bug in the patternlab-core* that expects patternlab-node to have a subdirectory of node_modules.
-
-As a quick fix, run this
-
-```sh
-$ mkdir -p node_modules/patternlab-core/node_modules
+```scss
+@import 'zoek-bootstrap';
 ```
 
-*Exception thrown line 41 of pattern_engines.js — should really raise an github issue for this...
+## Upgrading
+
+Simply amend the version no in package.json run `npm prune && npm install`. Don't forget to unpack the assets again.
+
+## Contributing
+
+See [install instructions and development guide](docs/contributing.md).
 
 
-# Development
-
-Run the following to watch for changes to the patterns and automatically rebuild and serve the pattern lab
-
-```sh
-$ npm start
-```
-
-Styles are built using Sass, to build them once run 
-
-```sh
-$ npm run build:css
-$ npm run build:scaffolding-css
-```
-
-When developing locally, these can be automatically run (using concurrently) with the following
-
-```sh
-$ npm run build:dev
-```
+© 2017 Copyright Zoek Applications Ltd
