@@ -14,7 +14,7 @@ To enable local install of gulp, add this to `./package.json`
   }
 ```
 
-## Copy the default gruntfile and config from the editions
+## Copy the default gulpfile and config from the editions
 
 ```sh
 cp node_modules/edition-node-gulp/gulpfile.js .
