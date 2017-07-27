@@ -2,6 +2,59 @@
 
 ## Installing
 
+Run the following to install zoek-bootstrap's dependencies and the styleguide dependencies
+
+```sh
+$ npm run bootstrap
+```
+
+
+## Development
+
+### Running styleguide
+
+[Patternlab](http://patternlab.io/) is used as the styleguide it can be built by:
+
+```sh
+$ cd ./packages/patternlab
+$ npm run build:scaffolding-css
+$ npm run build:patternlab
+```
+
+Start pattern lab, and have it monitor for changes by:
+
+```sh
+$ npm start
+```
+
+## CSS & JS
+
+Bootstraps css and js are designed to be consumed by the downstream projects so there is no build as such, however you need to build them to work with patternlab. Run the following build and output into the patternlab `public` 
+
+```sh
+$ npm run build:css
+$ npm run build:js
+```
+
+Or use the following to watch for changes and automatically build both css and js
+
+```sh
+$ npm run build:dev
+```
+
+### Updating images
+
+After you've updated any bootstrap images, then run the following to copy them to pattern lab
+
+```sh
+$ npm run bootstrap:assets
+```
+
+
+## Pattern lab installation notes
+
+Included here for reference, there is no need to perform any of these tasks
+
 ```sh
 $ npm install --save-dev patternlab-node
 $ npm install --save-dev edition-node-gulp
@@ -52,24 +105,3 @@ $ mkdir -p node_modules/patternlab-core/node_modules
 
 *Exception thrown line 41 of pattern_engines.js — should really raise an github issue for this...
 
-
-# Development
-
-Run the following to watch for changes to the patterns and automatically rebuild and serve the pattern lab
-
-```sh
-$ npm start
-```
-
-Styles are built using Sass, to build them once run 
-
-```sh
-$ npm run build:css
-$ npm run build:scaffolding-css
-```
-
-When developing locally, these can be automatically run (using concurrently) with the following
-
-```sh
-$ npm run build:dev
-```
