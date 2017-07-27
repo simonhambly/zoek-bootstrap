@@ -13,6 +13,8 @@ $ npm install --save-dev git+https://github.com/simonhambly/zoek-bootstrap.git#v
 
 (given this for internal use, we see no reason to pollute npm)
 
+(On windows, you might need to install some build tools - see [node-gyp](https://github.com/nodejs/node-gyp#installation))
+
 ### Unpacking assets
 
 zoek-bootstrap contains common assets (namely images and fonts) that need to be copied to your projects public assets. Out of the box the .scss designed to work with bootstrap assets in a folder named bootstrap, something akin to this directory structure:
