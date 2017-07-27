@@ -66,6 +66,16 @@ Bootstrap's .scss can be included at the start of your main .scss file like so
 
 Simply amend the version no in package.json run `npm prune && npm install`. Don't forget to unpack the assets again.
 
+## Styleguide
+
+Patternlab is being used for the style guide. Use this as a reference for the HTML needed to work with zoek-bootstrap. Clone this repo and :
+
+```sh
+$ npm run install:deps
+$ cd ./packages/patternlab
+$ npm start
+```
+
 ## Contributing
 
 See [install instructions and development guide](docs/contributing.md).
