@@ -29,13 +29,17 @@ function assetsOptionBuilder (yargs) {
 }
 
 function unpackAssets (argv) {
-  if (argv.clean) remove(argv.to) 
+  if (argv.clean) {
+    console.log(`Removing ${argv.to}`)
+    remove(argv.to) 
+  }
 
   ensureDir(argv.to)
 
   const dirs = ['/fonts', '/images']
 
   dirs.forEach((dir) => {
+    console.log(`Unpacking ${dir} to ${argv.to + dir}`)
     copy(argv.from + dir, argv.to + dir, { preserveTimestamps: true })  
   });
 }
