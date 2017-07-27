@@ -1,0 +1,24 @@
+{
+  "name": "zoek-bootstrap-patternlab",
+  "version": "0.1.0",
+  "description": "Patternlab styleguide for zoek-bootstrap",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "build:patternlab": "gulp patternlab:build",
+    "build:scaffolding-css": "node-sass --recursive --output-style compressed --output ./source/css pattern-scaffolding/pattern-scaffolding.scss",    
+    "gulp": "gulp",
+    "start": "gulp patternlab:serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zoek Applications Ltd",
+  "license": "ISC",
+  "devDependencies": {
+    "edition-node-gulp": "^1.4.0",
+    "node-sass": "^4.5.3",    
+    "patternlab-node": "^2.9.3",
+    "starterkit-mustache-base": "^3.0.1",
+    "styleguidekit-assets-default": "^3.4.0",
+    "styleguidekit-mustache-default": "^3.1.0"
+  }
+}
