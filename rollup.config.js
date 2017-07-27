@@ -8,7 +8,7 @@ import uglify from 'rollup-plugin-uglify'
 export default {
   entry: 'src/index.js',
   format: 'iife',
-  dest: 'source/js/zoek-bootstrap.js',
+  dest: 'packages/patternlab/public/js/zoek-bootstrap.js',
   plugins: [
     alias({
       app: path.resolve(__dirname, './src'),
