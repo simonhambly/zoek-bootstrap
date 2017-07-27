@@ -1,3 +1,9 @@
+const { 
+  copySync: copy,
+  ensureDirSync: ensureDir, 
+  removeSync: remove
+} = require('fs-extra')
+
 
 exports.assetsOptionBuilder = (yargs) => {
   return  yargs.option('clean', {

@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 const yargs = require('yargs')
-const { 
-  copySync: copy,
-  ensureDirSync: ensureDir, 
-  removeSync: remove
-} = require('fs-extra')
 
 const { assetsOptionBuilder, unpackAssets } = require('../cli/assets.js')
 
