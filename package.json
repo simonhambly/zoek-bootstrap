@@ -20,7 +20,7 @@
   "author": "Zoek Applications Ltd",
   "license": "ISC",
   "directories": {
-    "bin": "./bin"
+    "bin": "./src/bin"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
