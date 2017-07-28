@@ -1,8 +1,5 @@
-const chalk = require('chalk')
-const gulp = require('gulp')
 const sass = require('gulp-sass')
-const gutil = require('gulp-util')
-const pretty = require('pretty-hrtime')
+const gulp = require('../gulp')
 
 const optionBuilder = (yargs) => {
   return  yargs.option('output', {
@@ -39,15 +36,8 @@ function run (argv) {
   })
 
   gulp.task(watchSass, [buildSass], () => {
-    return gulp.watch(argv.watch, [buildSass])
-  })
-
-  gulp.on('task_start', (e) => {
-    gutil.log(`${chalk.cyan(e.task)} started`)
-  })
-
-  gulp.on('task_stop', (e) => {
-    gutil.log(`${chalk.cyan(e.task)} finished after ${chalk.magenta(pretty(e.hrDuration))}`)
+    const watch = argv.watch.lenth ? argv.watch : ['./**/*.scss']
+    return gulp.watch(watch, [buildSass])
   })
 
   gulp.start(buildSass)
