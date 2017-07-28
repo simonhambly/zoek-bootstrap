@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const yargs = require('yargs')
 
-const { assetsOptionBuilder, unpackAssets } = require('../cli/assets.js')
+const { assetsOptionBuilder, unpackAssets } = require('../commands/assets.js')
 
 
 const argv = yargs.usage('Usage: $0 path/to/destination/dir [options]')

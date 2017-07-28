@@ -4,20 +4,21 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "bootstrap:assets": "./src/bin/zoek-bootstrap assets --clean --from ./src --to ./packages/patternlab/public/bootstrap",
+    "bootstrap:assets": "./packages/cli/bin/zoek-bootstrap assets --clean --from ./src --to ./packages/patternlab/public/bootstrap",
     "build:css": "node-sass --recursive --output-style compressed --output ./packages/patternlab/public/css src/zoek-bootstrap.scss",
     "build:dev": "concurrently --kill-all --names 'Scaffolding,CSS,JS' --prefix '{name}-{time}' --timestamp-format 'HH:mm:ss' 'npm run build:scaffolding-css -- --watch' 'npm run build:css -- --watch' 'npm run build:js -- --watch'",
     "build:js": "rollup --config ./rollup.config.js",
     "flow": "flow",
     "install:deps": "lerna bootstrap",
     "install:normalize-scss": "cp -R ./node_modules/normalize-scss/sass/ ./src/normalize-scss",
+    "postinstall": "node post-install.js",
     "postversion": "git push && git push --tags",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zoek Applications Ltd",
   "license": "ISC",
-  "directories": {
-    "bin": "./src/bin"
+  "bin": {
+    "zoek-bootstrap": "./packages/bin/zoek-bootstrap"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -40,9 +41,8 @@
     "rollup-watch": "^4.0.0"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "domready": "^1.0.8",
-    "fs-extra": "^4.0.0",
-    "node-sass": "^4.5.3",
-    "yargs": "^8.0.2"
+    "node-sass": "^4.5.3"
   }
 }
