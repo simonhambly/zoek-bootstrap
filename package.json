@@ -11,7 +11,7 @@
     "flow": "flow",
     "install:deps": "lerna bootstrap",
     "install:normalize-scss": "cp -R ./node_modules/normalize-scss/sass/ ./src/normalize-scss",
-    "postinstall": "node post-install.js",
+    "postinstall": "node ./bin/post-install.js",
     "postversion": "git push && git push --tags",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
