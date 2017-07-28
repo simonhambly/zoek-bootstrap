@@ -5,7 +5,7 @@ const {
 } = require('fs-extra')
 
 
-exports.assetsOptionBuilder = (yargs) => {
+const optionBuilder = (yargs) => {
   return  yargs.option('clean', {
       describe: 'Remove destination folder before copying assets',
       type: 'boolean'
@@ -20,7 +20,7 @@ exports.assetsOptionBuilder = (yargs) => {
     .require('to', 'Must specify a location to copy assets to')  
 }
 
-function unpackAssets (argv) {
+function run (argv) {
   if (argv.clean) {
     console.log(`Removing ${argv.to}`)
     remove(argv.to) 
@@ -36,4 +36,7 @@ function unpackAssets (argv) {
   });
 }
 
-exports.unpackAssets = unpackAssets
+module.exports = {
+  optionBuilder,
+  run
+}
