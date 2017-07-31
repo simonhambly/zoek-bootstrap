@@ -6,7 +6,7 @@
   "scripts": {
     "bootstrap:assets": "./packages/cli/bin/zoek-bootstrap assets --clean --from ./src --to ./packages/patternlab/public/bootstrap",
     "build:css": "./packages/cli/bin/zoek-bootstrap sass --output ./packages/patternlab/public/css src/zoek-bootstrap.scss",
-    "build:scaffolding-css": "./packages/cli/bin/zoek-bootstrap sass --output ./packages/patternlab/public/css ./packages/patternlab/pattern-scaffolding.scss",
+    "build:scaffolding-css": "./packages/cli/bin/zoek-bootstrap sass --output ./packages/patternlab/public/css ./packages/patternlab/pattern-scaffolding/pattern-scaffolding.scss",
     "build:js": "./packages/cli/bin/zoek-bootstrap js --output-file ./packages/patternlab/public/js/zoek-bootstrap.js src/index.js",
     "flow": "flow",
     "install:deps": "lerna bootstrap",
