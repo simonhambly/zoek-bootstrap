@@ -1,22 +1,21 @@
 #!/usr/bin/env node
 const yargs = require('yargs')
 
-const assets = require('../commands/assets.js')
-const scss = require('../commands/scss.js')
+const assets = require('../commands/assets')
+const sass = require('../commands/sass')
 
 const commands = {
   assets,
-  scss
+  sass,
+  js
 }
 
 const argv = yargs.usage('Usage: $0 path/to/destination/dir [options]')
   .command('assets', 'Copies assets to a local directory', assets.optionBuilder)
-  .command('sass', 'Transpiles sass/scss to css', scss.optionBuilder)
+  .command('sass', 'Transpiles sass/scss to css', sass.optionBuilder)
   .help('help', 'help <command> for more details')
   .alias('help', 'h')
   .argv
 
 const command = argv._[0]
-// if (command === 'assets') assets.runCommand(argv)
-
 if (commands[command]) commands[command].run(argv)

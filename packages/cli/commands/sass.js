@@ -21,7 +21,6 @@ const buildSass = 'build:sass'
 const watchSass = 'watch:sass'
 
 function run (argv) {
-
   const source = argv._[1]
 
   gulp.task(buildSass, () => {
@@ -36,7 +35,7 @@ function run (argv) {
   })
 
   gulp.task(watchSass, [buildSass], () => {
-    const watch = argv.watch.lenth ? argv.watch : ['./**/*.scss']
+    const watch = argv.watch.length ? argv.watch : ['./src/**/*.scss']
     return gulp.watch(watch, [buildSass])
   })
 

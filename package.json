@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "bootstrap:assets": "./packages/cli/bin/zoek-bootstrap assets --clean --from ./src --to ./packages/patternlab/public/bootstrap",
-    "build:css": "node-sass --recursive --output-style compressed --output ./packages/patternlab/public/css src/zoek-bootstrap.scss",
+    "build:css": "./packages/cli/bin/zoek-bootstrap sass --clean --output ./packages/patternlab/public/css src/zoek-bootstrap.scss --watch './src/**/*.scss'",
     "build:dev": "concurrently --kill-all --names 'Scaffolding,CSS,JS' --prefix '{name}-{time}' --timestamp-format 'HH:mm:ss' 'npm run build:scaffolding-css -- --watch' 'npm run build:css -- --watch' 'npm run build:js -- --watch'",
     "build:js": "rollup --config ./rollup.config.js",
     "flow": "flow",
