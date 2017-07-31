@@ -5,6 +5,7 @@ const babel = require('rollup-plugin-babel')
 const commonjs = require('rollup-plugin-commonjs')
 const resolve = require('rollup-plugin-node-resolve')
 const uglify = require('rollup-plugin-uglify')
+const { minify } = require('uglify-es')
 
 
 const localNodeModules = path.resolve(__dirname, '../../node_modules/')
@@ -54,7 +55,7 @@ module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
             localPlugin('transform-object-rest-spread')
           ]
         }),
-        uglify()
+        uglify({}, minify)
       ]
 
     })
