@@ -5,5 +5,5 @@ const { resolve } = require('path')
 
 console.log('Installing cli dependencies')
 
-const cwd = resolve(__dirname, './packages/cli/') 
+const cwd = resolve(__dirname, '../packages/cli/') 
 cp.spawn('npm', ['i'], { env: process.env, cwd, stdio: 'inherit' })
