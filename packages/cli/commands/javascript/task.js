@@ -7,14 +7,19 @@ const resolve = require('rollup-plugin-node-resolve')
 const uglify = require('rollup-plugin-uglify')
 
 
+const localNodeModules = path.resolve(__dirname, '../../node_modules/')
+const localNodeModulesGlob = `${localNodeModules}/**`
+
+const localPlugin = (name) => path.join(localNodeModules, `babel-plugin-${name}`)
+const localPreset = (name) => path.join(localNodeModules, `babel-preset-${name}`)
+  
+
 module.exports = (source, destination, appAlias) => () => {
 
   const cwd = process.cwd()
-  const entry = path.resolve(cwd, source)
-  const cliNodeModules = path.resolve(cwd, './packages/cli/node_modules/')
-
+  
   return rollup.rollup({
-      entry: source,
+      entry: path.resolve(cwd, source),
       plugins: [
         alias({
           app: path.resolve(cwd, appAlias),
@@ -28,14 +33,14 @@ module.exports = (source, destination, appAlias) => () => {
           preferBuiltins: false 
         }),
         commonjs({
-          include: path.resolve(cwd, 'node_modules/**')
+          include: localNodeModulesGlob
         }),
         babel({
           babelrc: false,
-          exclude: path.resolve(cwd, 'node_modules/**'),
+          exclude: localNodeModulesGlob,
           presets: [
-              path.resolve(cliNodeModules, 'babel-preset-flow'),
-              [path.resolve(cliNodeModules, 'babel-preset-env'), {
+              localPreset('flow'),
+              [localPreset('env'), {
                 "modules": false,
                 "targets": {
                   "browsers": ["last 2 versions"]
@@ -43,8 +48,8 @@ module.exports = (source, destination, appAlias) => () => {
               }]
             ],
           plugins: [
-            path.resolve(cliNodeModules, 'babel-plugin-external-helpers'),
-            path.resolve(cliNodeModules, 'babel-plugin-transform-object-rest-spread')
+            localPlugin('external-helpers'),
+            localPlugin('transform-object-rest-spread')
           ]
         }),
         uglify()
