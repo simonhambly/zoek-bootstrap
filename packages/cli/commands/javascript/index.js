@@ -11,6 +11,11 @@ const optionBuilder = (yargs) => {
       type: 'string',
       default: './src'
     })
+    .option('bootstrap-alias', {
+      describe: "path to map to 'bootstrap' alias in imports (e.g. const x import 'bootstrap/x')",
+      type: 'string',
+      default: './node_modules/zoek-bootstrap/src'
+    })
     .require('output-file', 'Must specify an output file')
     .demand(1, 'Expected a source javascript file.')
 }
@@ -22,7 +27,7 @@ function run (argv) {
 
   const source = argv._[1]
 
-  gulp.task(buildjs, buildTask(source, argv.outputFile, argv.appAlias))
+  gulp.task(buildjs, buildTask(source, argv.outputFile, argv.appAlias, argv.bootstrapAlias))
 
   gulp.task(watchjs, [buildjs], () => {
     const watch = argv.watch.lenth ? argv.watch : ['./src/**/*.js']

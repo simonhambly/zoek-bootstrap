@@ -12,7 +12,7 @@ const localNodeModules = path.resolve(__dirname, '../../node_modules/')
 const localPlugin = (name) => path.join(localNodeModules, `babel-plugin-${name}`)
 const localPreset = (name) => path.join(localNodeModules, `babel-preset-${name}`)
 
-module.exports = (source, destination, appAlias) => () => {
+module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
 
   const cwd = process.cwd()
   const containerNodeModulesGlob = `${path.resolve(cwd, './node_modules')}/**`
@@ -22,6 +22,7 @@ module.exports = (source, destination, appAlias) => () => {
       plugins: [
         alias({
           app: path.resolve(cwd, appAlias),
+          bootstrap: path.resolve(cwd, bootstrapAlias),
           // add '/index.js' => to mimic standard node.js import behaviour, 
           // this allows imports like some/dir instead of some/dir/index.js
           resolve: ['.js', '/index.js'] 
