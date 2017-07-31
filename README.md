@@ -70,7 +70,13 @@ Bootstrap's .scss can be included at the start of your main .scss file like so
 
 ### Including bootstrap .js
 
-Todo...
+Add this at the start of your main.js file
+
+```js
+import 'zoek-bootstrap'
+
+// rest of app goes here.
+```
 
 ### On the build server
 
@@ -81,7 +87,7 @@ $ npm run build:css
 $ npm run build:js
 ```
 
-If you project root directory gets deployed then run
+If you project root directory gets included in the deployment package then run the following to clean devDependencies
 
 ```sh
 $ npm prune --production
