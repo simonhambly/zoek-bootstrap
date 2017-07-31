@@ -9,9 +9,10 @@ const optionBuilder = (yargs) => {
       describe: 'Watch files. Supports glob patterns (in quotes), separate multiple patterns with spaces',
       type: 'array'
     })
-    .option('include-path', {
+    .option('include-paths', {
       describe: 'Paths to attempt to resolve your @import declarations. Supports glob patterns (in quotes), separate multiple patterns with spaces',
-      type: 'array'
+      type: 'array',
+      default: ['./node_modules/zoek-bootstrap/src']
     })
     .require('output', 'Must specify an output directory')
     .demand(1, 'Expected a source scss file.')
