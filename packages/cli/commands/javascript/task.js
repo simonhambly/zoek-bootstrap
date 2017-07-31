@@ -11,11 +11,12 @@ const localNodeModules = path.resolve(__dirname, '../../node_modules/')
 
 const localPlugin = (name) => path.join(localNodeModules, `babel-plugin-${name}`)
 const localPreset = (name) => path.join(localNodeModules, `babel-preset-${name}`)
+const localNodeModulesGlob = `${localNodeModules}/**`
+
+const cwd = process.cwd()
+const containerNodeModulesGlob = `${path.resolve(cwd, './node_modules')}/**`
 
 module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
-
-  const cwd = process.cwd()
-  const containerNodeModulesGlob = `${path.resolve(cwd, './node_modules')}/**`
   
   return rollup.rollup({
       entry: path.resolve(cwd, source),
@@ -34,7 +35,7 @@ module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
           preferBuiltins: false 
         }),
         commonjs({
-          include: containerNodeModulesGlob
+          include: [localNodeModulesGlob, containerNodeModulesGlob]
         }),
         babel({
           babelrc: false,
@@ -62,5 +63,8 @@ module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
         dest: destination,
         format: 'iife'
       })
+    })
+    .catch(error => {
+      console.error(error)
     })
 }

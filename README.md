@@ -22,7 +22,7 @@ Include these scripts in your package.json (adjusting your source and out locati
 ```json
   "bootstrap:assets": "zoek-bootstrap assets --clean --to ./public/bootstrap",
   "build:css": "zoek-bootstrap sass --output ./public/css src/main.scss",
-  "build:js": "zoek-bootstrap js --output-file ./public/js src/index.js",
+  "build:js": "zoek-bootstrap js --output-file ./public/js/app.js src/index.js",
   "build:all": "npm run build:css && npm run build:js",
   "watch:css": "npm run build:css -- --watch",
   "watch:js": "npm run build:js -- --watch",

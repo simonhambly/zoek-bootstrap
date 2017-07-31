@@ -12,7 +12,7 @@ const optionBuilder = (yargs) => {
       default: './src'
     })
     .option('bootstrap-alias', {
-      describe: "path to map to 'bootstrap' alias in imports (e.g. const x import 'bootstrap/x')",
+      describe: "path to map to 'bootstrap' alias in imports (e.g. import x from 'bootstrap/x')",
       type: 'string',
       default: './node_modules/zoek-bootstrap/src'
     })
