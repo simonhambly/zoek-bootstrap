@@ -1,5 +1,5 @@
 // @flow
-const domready = require('domready')
+import domready from 'domready'
 
 const toggleMenu = (targetSelector: string, menuOpenClass: string) => () => {
   var target = document.querySelector(targetSelector)

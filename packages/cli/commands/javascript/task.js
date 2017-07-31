@@ -8,15 +8,14 @@ const uglify = require('rollup-plugin-uglify')
 
 
 const localNodeModules = path.resolve(__dirname, '../../node_modules/')
-const localNodeModulesGlob = `${localNodeModules}/**`
 
 const localPlugin = (name) => path.join(localNodeModules, `babel-plugin-${name}`)
 const localPreset = (name) => path.join(localNodeModules, `babel-preset-${name}`)
-  
 
 module.exports = (source, destination, appAlias) => () => {
 
   const cwd = process.cwd()
+  const containerNodeModulesGlob = `${path.resolve(cwd, './node_modules')}/**`
   
   return rollup.rollup({
       entry: path.resolve(cwd, source),
@@ -30,14 +29,15 @@ module.exports = (source, destination, appAlias) => () => {
         resolve({
           jsnext: true,
           main: true,
+          module: true,
           preferBuiltins: false 
         }),
         commonjs({
-          include: localNodeModulesGlob
+          include: containerNodeModulesGlob
         }),
         babel({
           babelrc: false,
-          exclude: localNodeModulesGlob,
+          exclude: containerNodeModulesGlob,
           presets: [
               localPreset('flow'),
               [localPreset('env'), {
