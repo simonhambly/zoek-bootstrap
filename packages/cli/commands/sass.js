@@ -25,7 +25,8 @@ function run (argv) {
 
   gulp.task(buildSass, () => {
     return gulp.src(source)
-      .pipe(sass({ 
+      .pipe(sass({
+          errLogToConsole: true, 
           outputStyle: 'compressed',
           includePaths: argv['include-paths']
         }

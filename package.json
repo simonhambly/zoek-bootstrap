@@ -5,15 +5,19 @@
   "main": "src/index.js",
   "scripts": {
     "bootstrap:assets": "./packages/cli/bin/zoek-bootstrap assets --clean --from ./src --to ./packages/patternlab/public/bootstrap",
-    "build:css": "./packages/cli/bin/zoek-bootstrap sass --clean --output ./packages/patternlab/public/css src/zoek-bootstrap.scss --watch './src/**/*.scss'",
-    "build:dev": "concurrently --kill-all --names 'Scaffolding,CSS,JS' --prefix '{name}-{time}' --timestamp-format 'HH:mm:ss' 'npm run build:scaffolding-css -- --watch' 'npm run build:css -- --watch' 'npm run build:js -- --watch'",
-    "build:js": "rollup --config ./rollup.config.js",
+    "build:css": "./packages/cli/bin/zoek-bootstrap sass --output ./packages/patternlab/public/css src/zoek-bootstrap.scss",
+    "build:scaffolding-css": "./packages/cli/bin/zoek-bootstrap sass --output ./packages/patternlab/public/css ./packages/patternlab/pattern-scaffolding.scss",
+    "build:js": "./packages/cli/bin/zoek-bootstrap js --output-file ./packages/patternlab/public/js/zoek-bootstrap.js src/index.js",
     "flow": "flow",
     "install:deps": "lerna bootstrap",
     "install:normalize-scss": "cp -R ./node_modules/normalize-scss/sass/ ./src/normalize-scss",
     "postinstall": "node ./bin/post-install.js",
     "postversion": "git push && git push --tags",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:scaffolding-css": "npm run build:scaffolding-css -- --watch './packages/patternlab/pattern-scaffolding/*.scss'",
+    "watch:js": "npm run build:js -- --watch",
+    "watch:all": "concurrently --kill-all --raw 'npm run watch:scaffolding-css' 'npm run watch:css' 'npm run watch:js'"
   },
   "author": "Zoek Applications Ltd",
   "license": "ISC",
@@ -21,24 +25,9 @@
     "zoek-bootstrap": "./packages/cli/bin/zoek-bootstrap"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-module-resolver": "^2.7.1",
-    "babel-preset-env": "^1.5.2",
-    "babel-preset-flow": "^6.23.0",
-    "babel-preset-stage-3": "^6.24.1",
     "concurrently": "^3.5.0",
-    "flow-bin": "^0.49.1",
-    "flow-typed": "^2.1.2",
     "lerna": "^2.0.0",
-    "normalize-scss": "^7.0.0",
-    "rollup": "^0.43.0",
-    "rollup-plugin-alias": "^1.3.1",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
-    "rollup-watch": "^4.0.0"
+    "normalize-scss": "^7.0.0"
   },
   "dependencies": {
     "child_process": "^1.0.2",

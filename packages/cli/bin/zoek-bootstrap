@@ -3,6 +3,7 @@ const yargs = require('yargs')
 
 const assets = require('../commands/assets')
 const sass = require('../commands/sass')
+const js = require('../commands/javascript')
 
 const commands = {
   assets,
@@ -10,10 +11,11 @@ const commands = {
   js
 }
 
-const argv = yargs.usage('Usage: $0 path/to/destination/dir [options]')
+const argv = yargs.usage('Usage: $0 <command> [options]')
   .command('assets', 'Copies assets to a local directory', assets.optionBuilder)
   .command('sass', 'Transpiles sass/scss to css', sass.optionBuilder)
-  .help('help', 'help <command> for more details')
+  .command('js', 'Transpiles and bundles ES5/6 javascript', js.optionBuilder)
+  .help('help', 'See help <command> for more details')
   .alias('help', 'h')
   .argv
 
