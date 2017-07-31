@@ -101,6 +101,14 @@ See `zoek-bootstrap --help` for more details
 
 Simply amend the version no in package.json run `npm prune && npm install`. Don't forget to unpack the assets again.
 
+## TODO
+
+- explain
+  - the build tools available
+  - how js is bundled
+  - support for es2015 modules
+- get flow working in consuming projects (works during dev of bootstrap itself)
+
 ## Styleguide
 
 Patternlab is being used for the style guide. Use this as a reference for the HTML needed to work with zoek-bootstrap. Clone this repo and run:
