@@ -11,7 +11,7 @@ Assuming you have node and npm installed and working, install by running
 $ npm install --save-dev git+https://github.com/simonhambly/zoek-bootstrap.git#v0.2.4
 ```
 
-(given this is for internal use, we see no reason to pollute npm)
+*(We don't intend on publishing this to npm given this is for internal use)*
 
 On windows, you might need to install some build tools - see [node-gyp](https://github.com/nodejs/node-gyp#installation)
 
@@ -39,7 +39,7 @@ $ npm run watch:all
 
 This builds your project css and js, with the build tools watching `./src` for further changes.
 
-## In depth
+## Digging deeper
 
 ### Including the common bootstrap assets
 
@@ -87,7 +87,7 @@ $ npm run build:css
 $ npm run build:js
 ```
 
-If you project root directory gets included in the deployment package then run the following to clean devDependencies
+If your project root directory gets included in the deployment package then run the following to clean devDependencies
 
 ```sh
 $ npm prune --production
