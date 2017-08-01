@@ -1,4 +1,4 @@
-# Zoek Bootstrap
+# Zoek bootstrap
 
 A standardised look and feel for applications at [zoek.uk](https://zoek.uk). Contains all the source .scss and .js and the build tools you need to get them incorporated into your project.
 
@@ -37,7 +37,7 @@ $ npm run bootstrap:assets
 $ npm run watch:all
 ```
 
-This builds your project css and js, with the build tools watching `./src` for further changes.
+This copies the bootstrap assets, builds your project css and js and leaves the build tools watching `./src` for further changes.
 
 ## Digging deeper
 
@@ -57,6 +57,8 @@ project-public-folder
 ├── _styles
 |   └── project.css
 ```
+
+#### Warning
 
 **Be warned zoek-bootstrap considers bootstrap it's own, so `--clean` removes the whole bootstrap directory, before copying the assets.**
 
