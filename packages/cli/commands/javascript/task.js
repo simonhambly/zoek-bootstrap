@@ -15,7 +15,8 @@ const localPreset = (name) => path.join(localNodeModules, `babel-preset-${name}`
 const localNodeModulesGlob = `${localNodeModules}/**`
 
 const cwd = process.cwd()
-const containerNodeModulesGlob = `${path.resolve(cwd, './node_modules')}/**`
+const containerNodeModulesGlob = path.resolve(cwd, './node_modules/**')
+const noneBoostrapNodeModulesGlob = path.resolve(cwd, './node_modules/!(zoek-bootstrap)/**')
 
 module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
   
@@ -40,7 +41,7 @@ module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
         }),
         babel({
           babelrc: false,
-          exclude: containerNodeModulesGlob,
+          exclude: noneBoostrapNodeModulesGlob,
           presets: [
               localPreset('flow'),
               [localPreset('env'), {
