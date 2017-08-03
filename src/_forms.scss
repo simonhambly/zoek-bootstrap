@@ -13,7 +13,7 @@
   @include placeholder;
 }
 
-input[type=text], input[type=password], textarea {
+input[type=text], input[type=password], input[type=email], textarea {
   color: $color-brand-pink;
   letter-spacing: 0.05rem;
   border-radius: 0.5rem;
@@ -67,11 +67,24 @@ div.field {
     @include fitToBaselineGrid(-1);
     margin: 0;
 
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: 1px solid #B9B9B9;
+    border-top: none;
+    padding: 0 0.5rem;
+
     @include sentence-case;
 
     &.respect-case {
       @include respect-case;
     }
+  }
+  
+  div.field__validation-message::before {
+    content: "";
+    background-color: #FFCB4B;
+    height: 0.5rem;
+    display: block;
+    margin-top: -0.5rem;
   }
 }
 
