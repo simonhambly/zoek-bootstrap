@@ -1,3 +1,8 @@
 span.screen-reader {
   display: none;
 }
+
+@mixin remove-bullets {
+  list-style: none;
+  padding-left: 0; 
+}
