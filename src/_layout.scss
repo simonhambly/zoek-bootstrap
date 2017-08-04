@@ -81,11 +81,6 @@ main {
 
   justify-content: flex-start;
 
-  @include small-screen-up {
-    padding-left: $gutter-width/2;
-    padding-right: $gutter-width/2;
-  }
-
   html.hirer & {
     background-color: $color-brand-dark-blue-80;
     color: $color-secondary-white;
