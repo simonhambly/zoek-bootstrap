@@ -6,4 +6,8 @@ const { resolve } = require('path')
 console.log('Installing cli dependencies')
 
 const cwd = resolve(__dirname, '../packages/cli/') 
-cp.spawn('npm', ['i'], { env: process.env, cwd, stdio: 'inherit' })
+
+const opts = { env: process.env, cwd, stdio: 'inherit' }
+if (process.platform === 'win32') opts.shell = true
+
+cp.spawn('npm', ['i'], opts)
