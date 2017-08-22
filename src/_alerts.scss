@@ -1,0 +1,10 @@
+.warning-message {
+  background-color: $color-secondary-yellow;
+  color: $color-neutral-70;
+  padding: baselineGridUnits(1) $gutter-width;
+
+  & > p:last-child,
+  & > ul:last-child li:last-child {
+    margin-bottom: 0;
+  }
+}

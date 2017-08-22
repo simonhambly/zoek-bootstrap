@@ -65,6 +65,7 @@ div.field {
     font-size: $font-size-s;
     background-color: $color-utility-caution;
     @include fitToBaselineGrid(-1);
+    color: $color-neutral-70;
     margin: 0;
 
     border-radius: 0 0 0.5rem 0.5rem;
@@ -81,7 +82,7 @@ div.field {
   
   div.field__validation-message::before {
     content: "";
-    background-color: #FFCB4B;
+    background-color: $color-utility-caution;
     height: 0.5rem;
     display: block;
     margin-top: -0.5rem;
