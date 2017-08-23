@@ -13,12 +13,7 @@
   height: baselineGridUnits(2);
 
   width: 100%;
-  @include sentence-case;
-
-  &.respect-case {
-    @include respect-case;
-  }
-  
+  @include enforce-case;  
 }
 
 @mixin link-as-button {

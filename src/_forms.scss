@@ -40,11 +40,8 @@ div.field {
     padding: 0 baselineGridUnits(0.3333);
     margin-bottom: 0;
     display: block;
-    @include sentence-case;
 
-    &.respect-case {
-      @include respect-case;
-    }
+    @include enforce-case;
   }
 
   div.field__note {
@@ -54,11 +51,7 @@ div.field {
     padding: 0 baselineGridUnits(0.3333);
     margin: 0;
 
-    @include sentence-case;
-
-    &.respect-case {
-      @include respect-case;
-    }
+    @include enforce-case;
   }
 
   div.field__validation-message {
@@ -73,11 +66,7 @@ div.field {
     border-top: none;
     padding: 0 0.5rem;
 
-    @include sentence-case;
-
-    &.respect-case {
-      @include respect-case;
-    }
+    @include enforce-case;
   }
   
   div.field__validation-message::before {
