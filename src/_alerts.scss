@@ -4,7 +4,7 @@
   padding: baselineGridUnits(1) $gutter-width;
 
   & > p:last-child,
-  & > ol:last-child li:last-child {
+  & > ol:last-child li:last-child, 
   & > ul:last-child li:last-child {
     margin-bottom: 0;
   }
