@@ -109,8 +109,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-stack;
   text-rendering: optimizeLegibility;
   font-weight: unset;
-
-  @include enforce-case;
 }
 
 // TODO: sort max-wdith on these based on rem
