@@ -41,7 +41,11 @@ $perfectFourthFontSizes: (
 @mixin fitToBaselineGrid ($scale) {
   $font-size: fontSizeForScale($scale);
   font-size: $font-size;
-  line-height: lineCount($font-size) * $baseline-line-height;
+  @if ($scale == 1) {
+    line-height: 2;
+  } @else {
+    line-height: lineCount($font-size) * $baseline-line-height;    
+  }
   margin: 0 0 $baseline-line-height 0;
 }
 
