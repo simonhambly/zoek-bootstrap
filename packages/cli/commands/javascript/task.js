@@ -1,6 +1,6 @@
 const path = require('path')
 const rollup = require('rollup')
-const alias = require('rollup-plugin-alias')
+const alias = require('rollup-plugin-alias-x').default
 const babel = require('rollup-plugin-babel')
 const commonjs = require('rollup-plugin-commonjs')
 const resolve = require('rollup-plugin-node-resolve')
@@ -26,9 +26,6 @@ module.exports = (source, destination, appAlias, bootstrapAlias) => () => {
         alias({
           app: path.resolve(cwd, appAlias),
           bootstrap: path.resolve(cwd, bootstrapAlias),
-          // add '/index.js' => to mimic standard node.js import behaviour, 
-          // this allows imports like some/dir instead of some/dir/index.js
-          resolve: ['.js', '/index.js'] 
         }),
         resolve({
           jsnext: true,
