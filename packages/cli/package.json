@@ -24,7 +24,7 @@
     "gulp-sass": "^3.1.0",
     "pretty-hrtime": "^1.0.3",
     "rollup": "^0.45.2",
-    "rollup-xplugin-alias-x": "git+https://github.com/zoekuk/rollup-plugin-alias-x.git",
+    "rollup-plugin-alias-x": "git+https://github.com/zoekuk/rollup-plugin-alias-x.git",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
