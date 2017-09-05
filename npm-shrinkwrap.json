@@ -1,6 +1,6 @@
 {
   "name": "zoek-bootstrap",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "dependencies": {
     "add-stream": {
       "version": "1.0.0",
